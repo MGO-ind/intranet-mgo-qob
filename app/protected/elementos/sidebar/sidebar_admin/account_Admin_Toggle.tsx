@@ -10,14 +10,13 @@ export const AccountAdminToggle = async () => {
                 <div className="text-start">
                     <span className="text-sm font-bold block">
                         name
-                    </span>
-                    
+                    </span> 
                 </div>
                  
             </button>
-            <span className="text-xs ">
-                        {session?.user?.email}
-                    </span>
+            <span className="text-xs block">
+                {session?.user?.email}
+            </span>
         </div>  
     </>
 
