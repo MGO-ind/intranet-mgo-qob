@@ -12,7 +12,7 @@ export const AccountAdminToggle = async () => {
                         name
                     </span> 
                     
-                    <span className="text-xs block">
+                    <span className="text-xs block py-1">
                         {session?.user?.email}
                     </span>
                 </div>         
