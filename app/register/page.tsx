@@ -20,7 +20,7 @@ export default function Login() {
   }
 
   return (
-    <div className="flex h-screen w-screen items-center justify-center bg-gray-50">
+    <div className="flex h-screen w-screen items-center justify-center bg-green-200">
       <div className="z-10 w-full max-w-md overflow-hidden rounded-2xl border border-stone-400 bg-stone-800 shadow-xl">
         <div className="flex flex-col items-center justify-center space-y-3 border-b border-stone-400 bg-stone-900 px-4 py-6 pt-8 text-center sm:px-16">
           <h3 className="text-xl font-semibold">Registro</h3>
