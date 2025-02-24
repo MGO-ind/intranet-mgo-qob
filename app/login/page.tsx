@@ -24,13 +24,7 @@ export default function Login() {
           }}
         >
           <SubmitButton>Iniciar</SubmitButton>
-          <p className="text-center text-sm text-gray-600">
-            {"Registro "}
-            <Link href="/register" className="font-semibold text-gray-800">
-              Sign up
-            </Link>
-         
-          </p>
+          
         </Form>
       </div>
     </div>
