@@ -1,31 +1,8 @@
-//"use client"
 
-//import {  useState } from "react";
-//import { OrigenBrownsville } from "./destinoSelect/origenBrownsville";
-//import { OrigenLeon } from "./destinoSelect/origenLeon";
 import { FiDollarSign } from "react-icons/fi";
-//import { OrigenMonterrey } from "./destinoSelect/origenMonterrey";
+
 
 export const ConsultaFlete  = () => {
-
-    /*const  [ values, setValues ] = useState({
-        origen:"",
-
-        });
-    const [selected,setselected]=useState({
-        origen:"",
-    })
-
-    const handleChange = (e)=>{
-        const {name, value} =e.target;
-        setValues({
-            ...values,
-            [name]: value,
-        });
-        setselected(e.target.value);
-
-        console.log(value);
-    }*/
 
     return (
         <div className="col-span-12 overflow-hidden rounded-3xl bg-zinc-800 border border-stone-500 shadow-lg h-[auto]">
@@ -62,9 +39,3 @@ export const ConsultaFlete  = () => {
     );
 };
 
-/*<div className="col-span-8">
-                    {selected == "Monterrey"?<OrigenMonterrey/>:""}
-                    {selected == "Brownsville"?<OrigenBrownsville/>:""}
-                    {selected == "León"?<OrigenLeon/>:""} 
-
-                </div>*/
