@@ -10,7 +10,7 @@ export const RouteSelectAdmin = () => {
       <TransitionLink Icon={FiHome} selected={false} title="Inicio" href="/"/>
       <TransitionLink Icon={FiPaperclip} selected={false} title="Inventario" href=""/>
       <TransitionLink Icon={FiLink} selected={false} title="Registro de Usuario" href="/register"/>
-      <TransitionLink Icon={FiDollarSign} selected={false} title="Cotizador" href="/cotizador" />
+      <TransitionLink Icon={FiDollarSign} selected={false} title="Cotizador" href="/protected/cotizador" />
     </div>
   );
 };
