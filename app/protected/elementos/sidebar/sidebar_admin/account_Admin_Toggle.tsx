@@ -7,12 +7,12 @@ export const AccountAdminToggle = async () => {
         <div className="border-b mb-4 mt-2 pb-4 border-stone-200">
             <button className="flex items-center p-0.5 hover:bg-slate-600 rounded-full transition-colors relative gap-2 w-full item-center">
         
-                <div className="row text-center">
+                <div className="row-span-1 text-center">
                     <span className="text-sm font-bold block">
                         name
                     </span> 
                     </div>
-                    <div className="row items-center text-center">
+                    <div className="row-span-2 items-center text-center">
                     <span className="text-xs block">
                         {session?.user?.email}
                     </span>
