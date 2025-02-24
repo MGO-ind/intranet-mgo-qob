@@ -29,7 +29,7 @@ export default function Login() {
           </p>
         </div>
         <Form action={register}>
-          <SubmitButton>Sign Up</SubmitButton>
+          <SubmitButton>Registrar nuevo usuario</SubmitButton>
         </Form>
       </div>
     </div>
