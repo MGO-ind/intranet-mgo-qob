@@ -11,6 +11,8 @@ export const AccountAdminToggle = async () => {
                     <span className="text-sm font-bold block">
                         name
                     </span> 
+                    </div>
+                    <div className="flex items-center text-center">
                     <span className="text-xs block">
                         {session?.user?.email}
                     </span>
