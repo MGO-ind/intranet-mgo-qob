@@ -25,7 +25,7 @@ export default function Login() {
         <div className="flex flex-col items-center justify-center space-y-3 border-b border-stone-400 bg-stone-900 px-4 py-6 pt-8 text-center sm:px-16">
           <h3 className="text-xl font-semibold">Registro</h3>
           <p className="text-sm text-gray-300">
-            Create an account with your email and password
+            Crea una cuenta nueva.
           </p>
         </div>
         <Form action={register}>
