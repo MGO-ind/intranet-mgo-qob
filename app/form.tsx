@@ -8,7 +8,7 @@ export function Form({
   return (
     <form
       action={action}
-      className="flex flex-col space-y-4 bg-black px-4 py-8 sm:px-16"
+      className="flex flex-col space-y-4 bg-stone-800 px-4 py-8 sm:px-16"
     >
       <div>
         <label
@@ -24,7 +24,7 @@ export function Form({
           placeholder="usuario@mgoindustrial.com"
           autoComplete="email"
           required
-          className="mt-1 block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 placeholder-gray-400 shadow-sm focus:border-black focus:outline-none focus:ring-black sm:text-sm"
+          className="mt-1 block w-full appearance-none rounded-full border border-gray-300 px-3 py-2 placeholder-gray-400 shadow-sm focus:border-black focus:outline-none focus:ring-black sm:text-sm"
         />
       </div>
       <div>
@@ -39,7 +39,7 @@ export function Form({
           name="password"
           type="password"
           required
-          className="mt-1 block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 placeholder-gray-400 shadow-sm focus:border-black focus:outline-none focus:ring-black sm:text-sm"
+          className="mt-1 block w-full appearance-none rounded-full border border-gray-300 px-3 py-2 placeholder-gray-400 shadow-sm focus:border-black focus:outline-none focus:ring-black sm:text-sm"
         />
       </div>
       {children}
