@@ -33,7 +33,7 @@ export default function Login() {
           <p className="text-center text-sm text-gray-600">
             {'Already have an account? '}
             <Link href="/login" className="font-semibold text-gray-800">
-              Sign in
+              Iniciar sesion
             </Link>
             {' instead.'}
           </p>

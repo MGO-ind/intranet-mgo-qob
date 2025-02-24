@@ -15,13 +15,13 @@ export function Form({
           htmlFor="email"
           className="block text-xs text-gray-600 uppercase"
         >
-          Email Address
+          Correo Electronico
         </label>
         <input
           id="email"
           name="email"
           type="email"
-          placeholder="user@acme.com"
+          placeholder="usuario@mgoindustrial.com"
           autoComplete="email"
           required
           className="mt-1 block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 placeholder-gray-400 shadow-sm focus:border-black focus:outline-none focus:ring-black sm:text-sm"
@@ -32,7 +32,7 @@ export function Form({
           htmlFor="password"
           className="block text-xs text-gray-600 uppercase"
         >
-          Password
+          Contraseña
         </label>
         <input
           id="password"
