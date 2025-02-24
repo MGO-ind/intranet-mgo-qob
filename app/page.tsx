@@ -12,7 +12,7 @@ export default function Page() {
           <div className="text-center items-center justify-center max-w-screen-sm mb-10">
            
             <h1 className="text-stone-200 font-bold text-4xl">
-              MGO QOB
+              MGO QOB 
             </h1>
           </div>
           <div className="flex space-x-2 items-center justify-center text-3xl align-middle text-center">
