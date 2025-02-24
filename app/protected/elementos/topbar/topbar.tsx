@@ -33,7 +33,7 @@ function SignOut() {
           await signOut();
         }}
       >
-        <button className="flex text-sm items-center gap-2 text-stone-900 bg-stone-100 transition-colors hover:bg-blue-100 hover:text-blue-800 px-3 py-1.5 rounded-full" type="submit"><FaSignOutAlt /> Cerrar Sesión</button>
+        <button className="flex text-sm items-center gap-2 text-stone-900 bg-stone-100 transition-colors hover:bg-blue-100 hover:text-stone-800 px-3 py-1.5 rounded-full" type="submit"><FaSignOutAlt /> Cerrar Sesión</button>
       </form>
     );
   }

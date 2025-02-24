@@ -7,7 +7,7 @@ export const AccountAdminToggle = async () => {
         <div className="border-b mb-4 mt-2 pb-4 border-stone-200">
             <button className="flex p-0.5 hover:bg-slate-600 rounded-full transition-colors relative gap-2 w-full item-center">
         
-                <div className="text-start">
+                <div className="flex items-center text-center">
                     <span className="text-sm font-bold block">
                         name
                     </span> 

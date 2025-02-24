@@ -1,4 +1,4 @@
-import { auth, signOut } from 'app/auth';
+import { auth } from 'app/auth';
 import SideBarAdmin from './elementos/sidebar/sidebar_admin/sidebar_admin';
 import { Dashboard } from './elementos/dashboard/dashboard';
 
@@ -10,12 +10,12 @@ export default async function ProtectedPage() {
     <SideBarAdmin/>
     <Dashboard />
 
-
-   <SignOut />
   </main> 
   );
 }
 
+/*
+    <SignOut />
 function SignOut() {
   return (
     <form
@@ -27,4 +27,4 @@ function SignOut() {
       <button type="submit">Sign out</button>
     </form>
   );
-}
+}*/
