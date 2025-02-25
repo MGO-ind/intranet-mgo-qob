@@ -5,9 +5,6 @@ import Swal from 'sweetalert2'
 
 export const FormularioCotizador = () => {
 
-    const formRef = useRef(null);
-    form: useRef<HTMLFormElement>
-
     const  [ values, setValues ] = useState({
         tipoDeCambio: "",
         costoBasico: "",
@@ -135,7 +132,8 @@ export const FormularioCotizador = () => {
                 });
             }            
         };
-    
+        const formRef = useRef();
+        form: useRef<HTMLFormElement>
     
         const borrarForm = (event: { preventDefault: () => void; }) => {
             event.preventDefault();
