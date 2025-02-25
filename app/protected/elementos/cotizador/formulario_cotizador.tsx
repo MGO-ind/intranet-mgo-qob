@@ -1,5 +1,5 @@
 "use client"
-import { FormEvent, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { AiFillCalculator } from "react-icons/ai";
 import Swal from 'sweetalert2'
 
@@ -135,12 +135,11 @@ export const FormularioCotizador = () => {
             }            
         };
        
-        const submitHandler = (e: FormEvent<HTMLFormElement>) => {
-            const resetForm = e.target as HTMLFormElement;
-            resetForm.reset();
-          };
           const formRef = useRef();
           form: useRef<HTMLFormElement>()
+
+          
+
         const borrarForm = (event: { preventDefault: () => void; }) => {
             event.preventDefault();
             if (formRef.current !=""){
@@ -178,7 +177,7 @@ export const FormularioCotizador = () => {
                     </span>
                 </p>
                      
-                <form  name="formCotizador" onSubmit={handleForm} >
+                <form  name="formCotizador" id="formCotizador" onSubmit={handleForm} >
                 
                     <div className="row">
                         <label>Tipo de Cambio: $</label>
@@ -283,7 +282,7 @@ export const FormularioCotizador = () => {
                            
                 </form> 
 
-                <button className="rounded-full border-red-300 border  transition-colors hover:bg-red-500 dark:bg-red-900 text-sm sm:text-base h-8 w-full sm:h-10 px-2 sm:px-5 m-2" onSubmit={(e) => submitHandler(e)} >Borrar</button>         
+                <button className="rounded-full border-red-300 border  transition-colors hover:bg-red-500 dark:bg-red-900 text-sm sm:text-base h-8 w-full sm:h-10 px-2 sm:px-5 m-2"  >Borrar</button>         
             </div>
        
             
