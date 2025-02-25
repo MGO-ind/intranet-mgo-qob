@@ -148,7 +148,7 @@ export const FormularioCotizador = () => {
                 //const formReset = formRef.current
                 //formReset.reset()
                 //formReset
-                document.getElementById('formCotizador')?.onreset
+                document.getElementById("formCotizador")?.reset()
 
             } else {
                 Swal.fire({
@@ -282,10 +282,12 @@ export const FormularioCotizador = () => {
 
                     <button className="rounded-full border-green-300 border  transition-colors hover:bg-green-500 dark:bg-green-700 text-sm sm:text-base h-8 w-full sm:h-10 px-2 sm:px-5 m-2" 
                         type="submit">Calcular</button>
+
+<button type="reset" className="rounded-full border-red-300 border  transition-colors hover:bg-red-500 dark:bg-red-900 text-sm sm:text-base h-8 w-full sm:h-10 px-2 sm:px-5 m-2" onClick={borrarForm} >Borrar</button>   
                            
                 </form> 
 
-                <button className="rounded-full border-red-300 border  transition-colors hover:bg-red-500 dark:bg-red-900 text-sm sm:text-base h-8 w-full sm:h-10 px-2 sm:px-5 m-2" onClick={borrarForm} >Borrar</button>         
+                      
             </div>
        
             
