@@ -140,12 +140,15 @@ export const FormularioCotizador = () => {
 
           
 
+          
+
         const borrarForm = (event: { preventDefault: () => void; }) => {
             event.preventDefault();
             if (formRef.current !=""){
                 //const formReset = formRef.current
                 //formReset.reset()
                 //formReset
+                document.getElementById('formCotizador')?.onreset
 
             } else {
                 Swal.fire({
@@ -282,7 +285,7 @@ export const FormularioCotizador = () => {
                            
                 </form> 
 
-                <button className="rounded-full border-red-300 border  transition-colors hover:bg-red-500 dark:bg-red-900 text-sm sm:text-base h-8 w-full sm:h-10 px-2 sm:px-5 m-2"  >Borrar</button>         
+                <button className="rounded-full border-red-300 border  transition-colors hover:bg-red-500 dark:bg-red-900 text-sm sm:text-base h-8 w-full sm:h-10 px-2 sm:px-5 m-2" onClick={borrarForm} >Borrar</button>         
             </div>
        
             
