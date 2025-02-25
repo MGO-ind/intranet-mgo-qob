@@ -137,19 +137,15 @@ export const FormularioCotizador = () => {
        
           const formRef = useRef();
           form: useRef<HTMLFormElement>()
-
           
-
-          
-
         const borrarForm = (event: { preventDefault: () => void; }) => {
             event.preventDefault();
             if (formRef.current !=""){
                 //const formReset = formRef.current
                 //formReset.reset()
                 //formReset
-                document.getElementById("formCotizador")?.onreset
-
+                document.getElementById("formCotizador")?.onreset 
+                
             } else {
                 Swal.fire({
                     title: "El formulario esta vacio",
