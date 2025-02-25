@@ -18,18 +18,7 @@ export const ConsultaFlete  = () => {
 
             <div className="grid gap-3 grid-cols-12 px-4">
                 <div className="col-span-4">
-                    <label>Origen:</label> 
-                    <select 
-                    className="text-black rounded-full text-sm sm:text-base h-8 sm:h-8 px-2 sm:px-5 m-2" 
-                    name="origen"      
-                    
-                    >
-                        <option>Selecciona una opcion</option>
-                        <option>Brownsville</option>
-                        <option>León</option>
-                        <option>Monterrey</option>
-                    </select> 
-
+                   
                 </div>
                 
                                
