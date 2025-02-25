@@ -148,7 +148,7 @@ export const FormularioCotizador = () => {
                 //const formReset = formRef.current
                 //formReset.reset()
                 //formReset
-                document.getElementById("formCotizador")?.reset()
+                document.getElementById("formCotizador")?.onreset
 
             } else {
                 Swal.fire({
