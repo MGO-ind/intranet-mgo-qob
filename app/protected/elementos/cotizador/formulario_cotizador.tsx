@@ -1,5 +1,5 @@
 "use client"
-import { useRef, useState } from "react";
+import { FormEvent, useRef, useState } from "react";
 import { AiFillCalculator } from "react-icons/ai";
 import Swal from 'sweetalert2'
 
@@ -72,6 +72,7 @@ export const FormularioCotizador = () => {
                 }
             };
             
+            
 // if de que no este ningun input vacio   
             if(values.tipoDeCambio !=='' && values.costoBasico !== '' && values.gastosAduanales !== '' && values.utilidad !== '' && values.flete !==''){
                 if(tamanio == "Jumbo"){
@@ -94,6 +95,7 @@ export const FormularioCotizador = () => {
                             popup: 'border-radius-0'
                           }
                       });
+                      
 
                 } else {
                     //dividir el resultado de flete entre costo, entre galones de unidad
@@ -132,15 +134,19 @@ export const FormularioCotizador = () => {
                 });
             }            
         };
-        const formRef = useRef();
-        form: useRef<HTMLFormElement>()
-    
+       
+        const submitHandler = (e: FormEvent<HTMLFormElement>) => {
+            const resetForm = e.target as HTMLFormElement;
+            resetForm.reset();
+          };
+          const formRef = useRef();
+          form: useRef<HTMLFormElement>()
         const borrarForm = (event: { preventDefault: () => void; }) => {
             event.preventDefault();
             if (formRef.current !=""){
-                const formReset = formRef.current
+                //const formReset = formRef.current
                 //formReset.reset()
-                formReset
+                //formReset
 
             } else {
                 Swal.fire({
@@ -276,7 +282,8 @@ export const FormularioCotizador = () => {
                         type="submit">Calcular</button>
                            
                 </form> 
-                <button type="reset" className="rounded-full border-red-300 border  transition-colors hover:bg-red-500 dark:bg-red-900 text-sm sm:text-base h-8 w-full sm:h-10 px-2 sm:px-5 m-2" onClick={borrarForm} >Borrar</button>         
+
+                <button className="rounded-full border-red-300 border  transition-colors hover:bg-red-500 dark:bg-red-900 text-sm sm:text-base h-8 w-full sm:h-10 px-2 sm:px-5 m-2" onSubmit={(e) => submitHandler(e)} >Borrar</button>         
             </div>
        
             
