@@ -1,6 +1,6 @@
 
 import { IconType } from "react-icons";
-import { FiDollarSign, FiHome, FiLink, FiPaperclip } from "react-icons/fi";
+import { FiDollarSign, FiHome, FiPaperclip } from "react-icons/fi";
 import Link from "next/link";
 
 
@@ -9,7 +9,6 @@ export const RouteSelectAdmin = () => {
     <div className="space-y-1">
       <TransitionLink Icon={FiHome} selected={false} title="Inicio" href="/"/>
       <TransitionLink Icon={FiPaperclip} selected={false} title="Inventario" href=""/>
-      
       <TransitionLink Icon={FiDollarSign} selected={false} title="Cotizador" href="/protected/cotizador" />
     </div>
   );
@@ -39,3 +38,5 @@ const TransitionLink = ({
     </Link>
   );
 };
+
+      //<TransitionLink Icon={FiLink} selected={false} title="Registro de Usuario" href="/register"/>
