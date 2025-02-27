@@ -9,7 +9,7 @@ import { RouteSelectAdmin } from "./routeSelect";
 export default function SideBarAdmin() {
 
   return (
-    <div className="font-[family-name:var(--font-geist-mono)]">
+    <div className="font-[family-name:var(--font-geist-mono)] collapse">
       <div className="overflow-y bg-black text-white sticky top-4 h-[calc(100vh-32px-48px)]" >
         <AccountAdminToggle/>
         <RouteSelectAdmin/>
