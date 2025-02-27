@@ -2,7 +2,7 @@ import { FiDollarSign } from "react-icons/fi";
 
 export const CambioDolares = () => {
     return (
-        <div className="col-span-8 sm:col-span-12 overflow-hidden rounded-3xl bg-zinc-800 border border-stone-500 shadow-lg">
+        <div className="lg:col-span-8 sm:col-span-12 overflow-hidden rounded-3xl bg-zinc-800 border border-stone-500 shadow-lg">
             <div className="p-4">
                 <h3 className="flex items-center gap-1.5 font-medium">
                     <FiDollarSign /> Revisar el valor del dolar
