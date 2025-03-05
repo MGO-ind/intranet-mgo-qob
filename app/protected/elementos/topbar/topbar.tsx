@@ -4,6 +4,11 @@ import { auth, signOut  } from 'app/auth';
 export const TopBar = async () => {
   const currentDat = new Date();
   const currentDate = currentDat.toLocaleDateString("en-US");
+
+  const day = currentDat.getDate();
+  const month = currentDat.getMonth() + 1;
+  const year = currentDat.getFullYear();
+
   let session = await auth();
   
   
@@ -13,7 +18,7 @@ export const TopBar = async () => {
       <div>
           <span className="text-sm font-bold block">🚀 Buen día, Name! {session?.user?.id}</span>
         <span className="text-sm block text-stone-200">
-        {currentDate}
+        {day} de {month} de {year} / {currentDate}
         </span>
       </div>     
         
