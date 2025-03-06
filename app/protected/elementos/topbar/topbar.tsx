@@ -9,7 +9,7 @@ export const TopBar = async () => {
   const day = currentDat.getDate();
 // Mes con numerito
 //   const month = currentDat.getMonth() + 1;
-  const montName = currentDat.toLocaleString('default', { month: 'long' });
+  const montName = currentDat.toLocaleString('default', { month: 'short' });
   const year = currentDat.getFullYear();
 
   let session = await auth();
