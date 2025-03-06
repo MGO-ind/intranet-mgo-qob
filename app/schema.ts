@@ -7,9 +7,9 @@ import postgres from 'postgres';
 let client = postgres(`${process.env.POSTGRES_URL!}?sslmode=require`);
 let db = drizzle(client);
 
-export async function getCosto(destino: string) {
+export async function getCosto(costo: string) {
   const costofletes = await ensureTableFleteExists();
-  return await db.select().from(costofletes).where(eq(costofletes.destino, destino));
+  return await db.select().from(costofletes).where(eq(costofletes.costo, costo));
 }
 
 
