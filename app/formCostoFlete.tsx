@@ -87,14 +87,14 @@ export function FormCostoFlete({
         </div>
         <div>
           <label
-            htmlFor="paqueteria"
+            htmlFor="id_paqueteria"
             className="block text-xs uppercase"
           >
             paqueteria:
           </label>
           <select
-            id="paqueteria"
-            name="paqueteria"
+            id="id_paqueteria"
+            name="id_paqueteria"
             className="mt-1 block w-full text-black appearance-none rounded-full border border-gray-300 px-3 py-2 placeholder-gray-700 shadow-sm focus:border-black focus:outline-none focus:ring-black sm:text-sm"
             >
             <option value={""}>Seleccione una opcion</option>

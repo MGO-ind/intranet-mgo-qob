@@ -11,13 +11,13 @@ export default function FormularioCostos() {
         let destino = formData.get('destino') as string;
         let tallaenvio = formData.get('tallaenvio') as string;
         let costo = formData.get('costo') as unknown as number;
-        let paqueteria = formData.get('paqueteria') as unknown as number;
+        let id_paqueteria = formData.get('paqueteria') as unknown as number;
         let flete = await getCosto(costo.toString()); 
 
         if (flete.length > 0) {
             return 'Costo ya existe'; // TODO: Handle errors with useFormStatus
         } else {
-            await createCosto(origen, destino, tallaenvio, costo, paqueteria);
+            await createCosto(origen, destino, tallaenvio, costo, id_paqueteria);
             }
         }
 

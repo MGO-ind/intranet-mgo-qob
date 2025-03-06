@@ -13,9 +13,9 @@ export async function getCosto(costo: string) {
 }
 
 
-export async function createCosto(origen: string, destino: string, tallaenvio: string, costo: number, paqueteria: number) {
+export async function createCosto(origen: string, destino: string, tallaenvio: string, costo: number, id_paqueteria: number) {
   const costofletes = await ensureTableFleteExists();
-  return await db.insert(costofletes).values([{ origen, destino, tallaenvio, costo: costo.toFixed(), paqueteria: paqueteria.toFixed() }]);
+  return await db.insert(costofletes).values([{ origen, destino, tallaenvio, costo: costo.toFixed(), id_paqueteria: id_paqueteria.toFixed() }]);
 }
 
 
@@ -35,7 +35,7 @@ async function ensureTableFleteExists() {
         destino TEXT,
         tallaenvio TEXT,
         costo numeric,
-        paqueteria numeric
+        id_paqueteria numeric
       );`;
   }
 
@@ -45,7 +45,7 @@ async function ensureTableFleteExists() {
     destino: text('destino'),
     tallaenvio: text('tallaenvio'),
     costo: numeric('costo'),
-    paqueteria: numeric('paqueteria'),
+    id_paqueteria: numeric('paqueteria'),
   });
 
   return table;
