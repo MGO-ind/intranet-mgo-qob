@@ -1,7 +1,25 @@
 //import { insertCostoFlete } from "@/app/action";
+import { FormCostoFlete } from "@/app/formCostoFlete";
+import { createCosto, getCosto } from "@/app/schema";
+import { SubmitButtonFlete } from "@/app/submit_button_flete";
 import { FiFolder } from "react-icons/fi";
 
 export default function FormularioCostos() {
+    async function costoFlete(formData: FormData) {
+        'use server';
+        let origen = formData.get('origen') as string;
+        let destino = formData.get('destino') as string;
+        let tallaenvio = formData.get('tallaenvio') as string;
+        let costo = formData.get('costo') as unknown as number;
+        let paqueteria = formData.get('paqueteria') as unknown as number;
+        let flete = await getCosto(costo.toString()); 
+
+        if (flete.length > 0) {
+            return 'Costo ya existe'; // TODO: Handle errors with useFormStatus
+        } else {
+            await createCosto(origen, destino, tallaenvio, costo, paqueteria);
+            }
+        }
 
 
     return (
@@ -16,79 +34,13 @@ export default function FormularioCostos() {
                 </h3>
             </div>
             <div className="h-[auto] sm:h-auto px-4 flex-row items-center ">
-            <form 
-        name="formCotizador" 
-        className="py-4"
+            <FormCostoFlete action={costoFlete}>
+            <SubmitButtonFlete>Capturar</SubmitButtonFlete>
 
-        >
-        <div className="row">
-            <label>Origen</label>
-            <select
-                name="origen"
-                id="origen"
-                className="w-6/12 text-black rounded-full text-sm sm:text-base h-8 sm:h-8 px-2 sm:px-5 m-2">
-                <option>Brownsville</option>
-                <option>Monterrey</option>
-                <option>León</option>
-            </select>
-        </div>
-        <div className="row">
-            <label>destino</label>
-            <select
-                name="destino"
-                id="destino"
-                className="w-7/12 text-black rounded-full text-sm sm:text-base h-8 sm:h-8 px-2 sm:px-5 m-2">
-                <option>México</option>
-                <option>León</option>
-                <option>Salamanca</option>
-                <option>Tizayuca</option>
-                <option>Querétaro</option>
-                <option>Guadalajara</option>
-                <option>Monterrey</option>
-                <option>Aguascalientes</option>
-                <option>Lagos de Moreno</option>
-                <option>Ciudad de México</option>
-                <option>Mazatlán</option>
-            </select>
-        </div>
-        <div className="row">
-            <label>Tamano</label>
-            <select
-                name="tallaenvio"
-                id="tallaenvio"
-                className="w-6/12 text-black rounded-full text-sm sm:text-base h-8 sm:h-8 px-2 sm:px-5 m-2">
-                <option>Jumbo</option>
-                <option>Full</option>
-            </select>
+            </FormCostoFlete>
+        
 
-        </div>
-        <div className="row">
-            <label>costo: $</label>
-            <input
-                name="costo"
-                id="costo"
-                placeholder="DTA"
-                className="w-8/12 text-black rounded-full text-sm sm:text-base h-8 sm:h-8 px-2 sm:px-5 m-2"
-                type="number"
-                step="any"
-
-            />
-        </div>
-        <div className="row">
-            <label>paqueteria: $</label>
-            <select
-                name="paqueteria"
-                id="paqueteria"
-                className="w-8/12 text-black rounded-full text-sm sm:text-base h-8 sm:h-8 px-2 sm:px-5 m-2"
-            >
-                <option value={""}>Seleccione una opcion</option>
-                <option value={1}>Paqueteria1</option>
-            </select>
-        </div>
-        <button className="rounded-full border-green-300 border  transition-colors hover:bg-green-500 dark:bg-green-700 text-sm sm:text-base h-8 w-full sm:h-10 px-2 sm:px-5 m-2"
-            type="submit">Capturar</button>
-
-    </form>
+   
 
             </div>
 
