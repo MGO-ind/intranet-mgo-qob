@@ -7,7 +7,7 @@ import { FiFolder } from "react-icons/fi";
 import Swal from "sweetalert2";
 
 export default function FormularioCostos() {
-    function errorCostoFlete() {
+    async function errorCostoFlete() {
         Swal.fire({
             icon: 'error',
             title: 'Oops...',
