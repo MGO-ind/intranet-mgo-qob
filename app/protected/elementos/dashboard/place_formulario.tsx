@@ -2,7 +2,7 @@
 import { FormCostoFlete } from "@/app/formCostoFlete";
 import { createCosto, getCosto } from "@/app/schema";
 import { SubmitButtonFlete } from "@/app/submit_button_flete";
-import { redirect } from "next/dist/server/api-utils";
+import { redirect } from "next/navigation";
 import { FiFolder } from "react-icons/fi";
 import Swal from "sweetalert2";
 
@@ -35,6 +35,7 @@ export default function FormularioCostos() {
         } else {
 
             await createCosto(origen, destino, tallaenvio, costo, id_paqueteria);
+            redirect('/ProtectedPage');
             Swal.fire({
                 title: "Se ha guardado el costo",
                 text: "El costo ha sido guardado con éxito",
