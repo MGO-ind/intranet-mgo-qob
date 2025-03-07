@@ -43,8 +43,8 @@ export default function FormularioCostos() {
         let flete = await getCosto(costo.toString()); 
 
         if (flete.length > 0) {
-            console.log('Costo ya existe');
-            return errorCostoFlete();
+            return console.log('Costo ya existe');
+            
             
              // TODO: Handle errors with useFormStatus - return 'Costo ya existe';
         } else {
