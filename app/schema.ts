@@ -53,6 +53,10 @@ async function ensureTableFleteExists() {
   return table;
 }
 
+export const dbCosto = drizzle(client)
+
+
+
 
 
 /*export const users = pgTable('costofletes', {
