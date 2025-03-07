@@ -45,7 +45,7 @@ async function ensureTableFleteExists() {
     destino: text('destino'),
     tallaenvio: text('tallaenvio'),
     costo: numeric('costo'),
-    id_paqueteria: numeric('paqueteria'),
+    id_paqueteria: numeric('id_paqueteria'),
   });
 
   return table;
