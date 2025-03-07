@@ -8,7 +8,7 @@ export function FormCostoFlete({
     return (
       <form
         action={action}
-        className="flex flex-col space-y-4 bg-stone-800 px-0 py-0 sm:px-2"
+        className="flex flex-col space-y-4 bg-zinc-800 px-2 py-5 sm:px-4"
       >
         <div>
           <label
@@ -38,7 +38,7 @@ export function FormCostoFlete({
           <select
             id="destino"
             name="destino"
-            className="mt-1 block w-full text-black appearance-none rounded-full border border-gray-300 px-3 py-2 placeholder-gray-700 shadow-sm focus:border-black  focus:ring-black sm:text-sm"
+            className="mt-1 block w-full text-black rounded-full border border-gray-300 px-3 py-2 focus:outline-none placeholder-gray-700 shadow-sm focus:border-black  focus:ring-black sm:text-sm"
           >
             <option>México</option>
             <option>León</option>
@@ -63,7 +63,7 @@ export function FormCostoFlete({
           <select
             id="tallaenvio"
             name="tallaenvio"
-            className="mt-1 block w-full text-black appearance-none rounded-full border border-gray-300 px-3 py-2 placeholder-gray-700 shadow-sm focus:border-black focus:outline-none focus:ring-black sm:text-sm"
+            className="mt-1 block w-full text-black rounded-full border border-gray-300 px-3 py-2 placeholder-gray-700 shadow-sm focus:border-black focus:outline-none focus:ring-black sm:text-sm"
           >
             <option>Jumbo</option>
             <option>Full</option>
@@ -95,7 +95,7 @@ export function FormCostoFlete({
           <select
             id="id_paqueteria"
             name="id_paqueteria"
-            className="mt-1 block w-full text-black appearance-none rounded-full border border-gray-300 px-3 py-2 placeholder-gray-700 shadow-sm focus:border-black focus:outline-none focus:ring-black sm:text-sm"
+            className="mt-1 block w-full text-black rounded-full border border-gray-300 px-3 py-2 placeholder-gray-700 shadow-sm focus:border-black focus:outline-none focus:ring-black sm:text-sm"
             >
             <option value={""}>Seleccione una opcion</option>
             <option value={1}>Paqueteria1</option>
