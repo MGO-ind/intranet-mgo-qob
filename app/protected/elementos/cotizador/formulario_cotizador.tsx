@@ -264,9 +264,9 @@ export const FormularioCotizador = () => {
                             /> 
                             <label className="w-full py-4 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Full </label>
                         </div>
-                        <div>
-                        <label className="">
-                            <input className="w-5 text-black rounded-full text-sm sm:text-base h-8 sm:h-8 m-2" 
+                        <div className="flex items-center ps-4 border border-gray-200 rounded-sm dark:border-gray-700">
+                        
+                            <input className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" 
                             name="tam" 
                             type="radio"
                             radioGroup="tamano"
@@ -274,7 +274,8 @@ export const FormularioCotizador = () => {
                             value={"Jumbo"}
                             placeholder="Costo del Flete"
                             onChange={handleInputChange} 
-                            /> Jumbo
+                            />
+                            <label className="w-full py-4 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"> Jumbo
                         </label>
                     </div>
 
