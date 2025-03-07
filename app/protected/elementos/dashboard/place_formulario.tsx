@@ -2,6 +2,7 @@
 import { FormCostoFlete } from "@/app/formCostoFlete";
 import { createCosto, getCosto } from "@/app/schema";
 import { SubmitButtonFlete } from "@/app/submit_button_flete";
+import { redirect } from "next/dist/server/api-utils";
 import { FiFolder } from "react-icons/fi";
 import Swal from "sweetalert2";
 
@@ -27,7 +28,9 @@ export default function FormularioCostos() {
                     popup: 'border-radius-0'
                 }
             });
+            console.log('Costo ya existe');
             return 'Costo ya existe';
+            
              // TODO: Handle errors with useFormStatus - return 'Costo ya existe';
         } else {
 
