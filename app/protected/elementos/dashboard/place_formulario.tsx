@@ -27,6 +27,7 @@ export default function FormularioCostos() {
                     popup: 'border-radius-0'
                 }
             });
+            return 'Costo ya existe';
              // TODO: Handle errors with useFormStatus - return 'Costo ya existe';
         } else {
 
