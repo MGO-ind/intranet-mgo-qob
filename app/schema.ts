@@ -15,7 +15,7 @@ export async function getCosto(costo: string) {
 
 export async function createCosto(origen: string, destino: string, tallaenvio: string, costo: number, id_paqueteria: number) {
   const costofletes = await ensureTableFleteExists();
-  return await db.insert(costofletes).values([{ origen, destino, tallaenvio, costo: costo.toFixed(), id_paqueteria: id_paqueteria.toFixed() }]);
+  return await db.insert(costofletes).values([{ origen, destino, tallaenvio, costo: costo.toFixed(2), id_paqueteria: id_paqueteria.toFixed(2)}]);
 }
 
 
