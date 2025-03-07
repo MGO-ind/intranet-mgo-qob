@@ -8,7 +8,7 @@ import Swal from "sweetalert2";
 
 export default function FormularioCostos() {
     async function errorCostoFlete() {
-        Swal.fire({
+    return Swal.fire({
             icon: 'error',
             title: 'Oops...',
             text: 'Costo ya existe',
