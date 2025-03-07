@@ -8,7 +8,7 @@ export function FormCostoFlete({
     return (
       <form
         action={action}
-        className="flex flex-col space-y-4 bg-stone-800 px-4 py-8 sm:px-16"
+        className="flex flex-col space-y-4 bg-stone-800 px-0 py-0 sm:px-2"
       >
         <div>
           <label
@@ -20,7 +20,7 @@ export function FormCostoFlete({
           <select
             id="origen"
             name="origen"
-            className="mt-1 block w-full text-black appearance-none rounded-full border border-gray-700 px-3 py-2 placeholder-gray-400 shadow-sm focus:border-black focus:outline-none focus:ring-black sm:text-sm"
+            className="mt-1 block w-full text-black rounded-full border border-gray-700 px-3 py-2 placeholder-gray-400 shadow-sm focus:border-black focus:outline-none focus:ring-black sm:text-sm"
             >
                 <option>Brownsville</option>
                 <option>Monterrey</option>
@@ -38,7 +38,7 @@ export function FormCostoFlete({
           <select
             id="destino"
             name="destino"
-            className="mt-1 block w-full text-black appearance-none rounded-full border border-gray-300 px-3 py-2 placeholder-gray-700 shadow-sm focus:border-black focus:outline-none focus:ring-black sm:text-sm"
+            className="mt-1 block w-full text-black appearance-none rounded-full border border-gray-300 px-3 py-2 placeholder-gray-700 shadow-sm focus:border-black  focus:ring-black sm:text-sm"
           >
             <option>México</option>
             <option>León</option>
