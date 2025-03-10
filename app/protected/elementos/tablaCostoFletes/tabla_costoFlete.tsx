@@ -15,9 +15,9 @@ export default async function TableFlete() {
                 <tr>
                     <th>Origen</th>
                     <th>Destino</th>
-                    <th>Talla de envio</th>
+                    <th>Tamaño de envio</th>
                     <th>Costo</th>
-                    <th>Paqueteria</th>
+                    <th>Copiar</th>
                 </tr>
             </thead>
             <tbody>
