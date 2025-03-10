@@ -32,8 +32,11 @@ export default async function TableFlete() {
     }
     return (
         <>
-        <RefreshButton/>
-        <table className="table-auto w-full">
+        <div className="col-span-12 rounded-3xl p-4 border bg-zinc-800 border-stone-300 items-center justify-items-center pb-10 gap-12 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+
+        
+        
+        <table className="table-auto border rounded-l w-full">
             <thead>
                 <tr>
                     <th>Origen</th>
@@ -55,6 +58,7 @@ export default async function TableFlete() {
                 ))}
             </tbody>
         </table>
+        </div>
         </>
     )
 }
