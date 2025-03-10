@@ -50,7 +50,7 @@ export default async function TableFlete() {
                         <td>{flete.destino}</td>
                         <td>{flete.tallaenvio}</td>
                         <td id='costo' >{flete.costo}</td>
-                        <td><button className="rounded-full border-green-300 border  transition-colors hover:bg-green-500 dark:bg-green-700 text-sm sm:text-base h-8 w-full sm:h-10 px-2 sm:px-5 m-2" onClick={copiarValor}>Copiar</button></td>
+                        <td><button className="rounded-full border-green-300 border  transition-colors hover:bg-green-500 dark:bg-green-700 text-sm sm:text-base h-8 w-full sm:h-10 px-2 sm:px-5 m-2" >Copiar</button></td>
                     </tr>
                 ))}
             </tbody>
