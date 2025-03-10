@@ -32,7 +32,7 @@ export default async function TableFlete() {
     }
     return (
         <>
-        <div className="col-span-12 rounded-3xl p-4 border bg-zinc-800 border-stone-300 items-center justify-items-center pb-10 gap-12 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+        <div className="col-span-12 rounded-3xl bg-zinc-800 items-center justify-items-center gap-12 font-[family-name:var(--font-geist-sans)]">
 
         
         
