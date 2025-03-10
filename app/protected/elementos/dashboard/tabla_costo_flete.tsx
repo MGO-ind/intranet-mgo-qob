@@ -1,3 +1,4 @@
+import TableFlete from "../tablaCostoFletes/tabla_costoFlete";
 
 
 export async function TablaCostoFlete() {
@@ -14,6 +15,7 @@ export async function TablaCostoFlete() {
                 </h3>
             </div>
             <div className="h-[auto] sm:h-auto px-4 flex-row items-center ">
+             <TableFlete />
             </div>
         </div>
     );
