@@ -53,6 +53,15 @@ async function ensureTableFleteExists() {
   return table;
 }
 
+export const costoflete = pgTable('costofletes', {
+  id: serial('id').primaryKey(),
+  origen: text('origen'),
+  destino: text('destino'),
+  tallaenvio: text('tallaenvio'),
+  costo: numeric('costo'),
+  id_paqueteria: numeric('id_paqueteria'),
+});
+
 export const dbCosto = drizzle(client)
 
 
