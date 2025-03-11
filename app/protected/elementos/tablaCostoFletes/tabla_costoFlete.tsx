@@ -54,7 +54,7 @@ export default async function TableFlete() {
                         <td>{flete.destino}</td>
                         <td>{flete.tallaenvio}</td>
                         <td>$<input name='costo' id='costo' readOnly className='text-white text-center h-7 bg-zinc-800 rounded-full'  value={flete.costo}/></td>
-                        <td className='mx-2 my-2'><button className="rounded-full border-green-300 border  transition-colors hover:bg-green-500 dark:bg-green-700 text-sm sm:text-base h-8 w-full sm:h-7 px-2 sm:px-5 m-2" >Copiar</button></td>
+                        <td className='mx-2 my-2'><button className="rounded-full border-green-300 border  transition-colors hover:bg-green-500 dark:bg-green-700 text-sm sm:text-base h-8 w-16 sm:h-7 px-2 sm:px-5 m-2" >Copiar</button></td>
                     </tr>
                 ))}
             </tbody>
