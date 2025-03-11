@@ -39,7 +39,7 @@ export default async function TableFlete() {
         <table className="table-auto border border-slate-50 rounded-xl p-2 w-full">
             <thead>
                 <tr className='
-                bg-stone-900 m-5 text-white text-center p-5'>
+                bg-stone-900 h-10 text-white text-center'>
                     <th>Origen</th>
                     <th>Destino</th>
                     <th>Tamaño de envio</th>
@@ -53,7 +53,7 @@ export default async function TableFlete() {
                         <td>{flete.origen}</td>
                         <td>{flete.destino}</td>
                         <td>{flete.tallaenvio}</td>
-                        <td>$<input name='costo' id='costo' readOnly className='text-white text-center h-7 bg-zinc-800 rounded-full w-35'  value={flete.costo}/></td>
+                        <td>$<input name='costo' id='costo' readOnly className='text-white text-center h-7 bg-zinc-800 rounded-full w-30'  value={flete.costo}/></td>
                         <td className='mx-2 my-2'><button className="rounded-full border-green-300 border  transition-colors hover:bg-green-500 dark:bg-green-700 text-sm sm:text-base h-8 w-32 sm:h-7 px-2 sm:px-5 m-2" >Copiar</button></td>
                     </tr>
                 ))}
