@@ -36,7 +36,7 @@ export default async function TableFlete() {
         <>
         <div className="col-span-12 bg-zinc-800 items-center justify-items-center gap-12 text-center font-[family-name:var(--font-geist-sans)]">
 
-        <table className="table-auto border rounded-xl p-2 w-full">
+        <table className="table-auto border-slate-50 rounded-xl p-2 w-full">
             <thead>
                 <tr className='
                 bg-stone-900 m-5 text-white text-center p-5'>
