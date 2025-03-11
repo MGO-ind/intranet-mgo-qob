@@ -17,7 +17,7 @@ export default function FormularioCostos() {
         let id_paqueteria = formData.get('id_paqueteria') as unknown as number;
         let flete = await getCosto(costo.toString());
 
-        if (origen === '' || destino === '' || tallaenvio === '' || costo === 0 || id_paqueteria === 0) {
+        if (origen === '' || destino === '' || tallaenvio === '' || costo === null || id_paqueteria === null) {
             return console.log('Llena todos los campos');
         } else {
             if (flete.length > 0) {
