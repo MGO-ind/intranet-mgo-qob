@@ -1,4 +1,4 @@
-"use client"
+
 //import { insertCostoFlete } from "@/app/action";
 import { FormCostoFlete } from "@/app/formCostoFlete";
 import { createCosto, getCosto } from "@/app/schema";
