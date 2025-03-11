@@ -180,7 +180,7 @@ export const FormularioCotizador = () => {
                 
                     <div>
                         <label 
-                        htmlFor="origen"
+                        htmlFor="tipoDeCambio"
                         className="block text-xs text-white uppercase">
                         Tipo de Cambio: $
                         </label>
@@ -194,8 +194,12 @@ export const FormularioCotizador = () => {
                             onChange={handleInputChange} 
                         />
                     </div>
-                    <div className="row">
-                        <label>Costo Basico: $</label>
+                    <div>
+                        <label 
+                        htmlFor="costoBasico"
+                        className="block text-xs text-white uppercase">
+                            Costo Basico: $
+                        </label>
                         <input 
                             name="costoBasico" 
                             placeholder="Costo Basico"
@@ -207,8 +211,12 @@ export const FormularioCotizador = () => {
 
                         />
                     </div>
-                    <div className="row">
-                        <label>Gastos Aduanales: $</label>
+                    <div>
+                        <label 
+                        htmlFor="gastosAduanales"
+                        className="block text-xs text-white uppercase">
+                            Gastos Aduanales: $
+                        </label>
                         <input 
                             name="gastosAduanales" 
                             placeholder="Gastos Aduanales"
@@ -219,8 +227,12 @@ export const FormularioCotizador = () => {
                             onChange={handleInputChange} 
                         />
                     </div>
-                    <div className="row">
-                        <label>DTA: $</label>
+                    <div>
+                        <label 
+                        htmlFor="dta"
+                        className="block text-xs text-white uppercase">
+                            DTA: $
+                        </label>
                         <input 
                             name="dta" 
                             placeholder="DTA"
@@ -231,8 +243,11 @@ export const FormularioCotizador = () => {
                             onChange={handleInputChange} 
                         />
                     </div>
-                    <div className="row">
-                        <label>Utilidad: $</label>
+                    <div>
+                        <label htmlFor="utilidad"
+                        className="block text-xs text-white uppercase">
+                            Utilidad: $
+                        </label>
                         <input 
                             name="utilidad" 
                             placeholder="Utilidad"
@@ -243,9 +258,12 @@ export const FormularioCotizador = () => {
                             onChange={handleInputChange} 
                         />
                     </div> 
-                    <div className="col-span-2">
-                        <label className=""> Flete: $
-                            <input className="mt-1 block w-full text-black rounded-full border border-gray-700 px-3 py-2 placeholder-gray-400 shadow-sm focus:border-black focus:outline-none focus:ring-black sm:text-sm appearance-none" 
+                    <div>
+                        <label htmlFor="flete"
+                        className="block text-xs text-white uppercase">
+                             Flete: $
+                        </label>
+                        <input className="mt-1 block w-full text-black rounded-full border border-gray-700 px-3 py-2 placeholder-gray-400 shadow-sm focus:border-black focus:outline-none focus:ring-black sm:text-sm appearance-none" 
                             name="flete" 
                             type="number"
                             step="any"
@@ -253,7 +271,7 @@ export const FormularioCotizador = () => {
                             placeholder="Costo del Flete"
                             onChange={handleInputChange} 
                             />
-                        </label>
+                       
                     </div>
                     <div className="flex items-center ps-4 border border-gray-200 rounded-sm dark:border-gray-700">
                         
