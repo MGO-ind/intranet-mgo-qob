@@ -1,6 +1,7 @@
 
 import { IconType } from "react-icons";
 import { FiDollarSign, FiHome, FiPaperclip } from "react-icons/fi";
+import { GrDeliver } from "react-icons/gr";
 import Link from "next/link";
 
 
@@ -10,6 +11,7 @@ export const RouteSelectAdmin = () => {
       <TransitionLink Icon={FiHome} selected={false} title="Inicio" href="/"/>
       <TransitionLink Icon={FiPaperclip} selected={false} title="Inventario" href=""/>
       <TransitionLink Icon={FiDollarSign} selected={false} title="Cotizador" href="/protected/cotizador" />
+      <TransitionLink Icon={GrDeliver} selected={false} title="Consultar Fletes" href="/protected/consultar_flete" />
     </div>
   );
 };
