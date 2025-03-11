@@ -187,7 +187,7 @@ export const FormularioCotizador = () => {
                         <input 
                             name="tipoDeCambio" 
                             placeholder="Tipo de Cambio" 
-                            className="mt-1 block w-full text-black rounded-full border border-gray-700 px-3 py-2 placeholder-gray-400 shadow-sm focus:border-black focus:outline-none focus:ring-black sm:text-sm" 
+                            className="mt-1 block w-full text-black rounded-full border border-gray-700 px-3 py-2 placeholder-gray-400 shadow-sm focus:border-black focus:outline-none focus:ring-black sm:text-sm appearance-none" 
                             type="number"
                             step="any"
                             
@@ -199,7 +199,7 @@ export const FormularioCotizador = () => {
                         <input 
                             name="costoBasico" 
                             placeholder="Costo Basico"
-                            className="w-7/12 text-black rounded-full text-sm sm:text-base h-8 sm:h-8 px-2 sm:px-5 m-2" 
+                            className="mt-1 block w-full text-black rounded-full border border-gray-700 px-3 py-2 placeholder-gray-400 shadow-sm focus:border-black focus:outline-none focus:ring-black sm:text-sm appearance-none" 
                             type="number"
                             step="any"
                           
@@ -212,7 +212,7 @@ export const FormularioCotizador = () => {
                         <input 
                             name="gastosAduanales" 
                             placeholder="Gastos Aduanales"
-                            className="w-6/12 text-black rounded-full text-sm sm:text-base h-8 sm:h-8 px-2 sm:px-5 m-2" 
+                            className="mt-1 block w-full text-black rounded-full border border-gray-700 px-3 py-2 placeholder-gray-400 shadow-sm focus:border-black focus:outline-none focus:ring-black sm:text-sm appearance-none" 
                             type="number"  
                             step="any"
                         
@@ -224,7 +224,7 @@ export const FormularioCotizador = () => {
                         <input 
                             name="dta" 
                             placeholder="DTA"
-                            className="w-8/12 text-black rounded-full text-sm sm:text-base h-8 sm:h-8 px-2 sm:px-5 m-2" 
+                            className="mt-1 block w-full text-black rounded-full border border-gray-700 px-3 py-2 placeholder-gray-400 shadow-sm focus:border-black focus:outline-none focus:ring-black sm:text-sm appearance-none" 
                             type="number"
                             step="any"
                           
@@ -236,7 +236,7 @@ export const FormularioCotizador = () => {
                         <input 
                             name="utilidad" 
                             placeholder="Utilidad"
-                            className="w-8/12 text-black rounded-full text-sm sm:text-base h-8 sm:h-8 px-2 sm:px-5 m-2" 
+                            className="mt-1 block w-full text-black rounded-full border border-gray-700 px-3 py-2 placeholder-gray-400 shadow-sm focus:border-black focus:outline-none focus:ring-black sm:text-sm appearance-none" 
                             type="number"
                             step="any"
                      
@@ -245,7 +245,7 @@ export const FormularioCotizador = () => {
                     </div> 
                     <div className="col-span-2">
                         <label className=""> Flete: $
-                            <input className="w-5/12 text-black rounded-full text-sm sm:text-base h-8 sm:h-8 px-2 sm:px-5 m-2" 
+                            <input className="mt-1 block w-full text-black rounded-full border border-gray-700 px-3 py-2 placeholder-gray-400 shadow-sm focus:border-black focus:outline-none focus:ring-black sm:text-sm appearance-none" 
                             name="flete" 
                             type="number"
                             step="any"
@@ -266,7 +266,7 @@ export const FormularioCotizador = () => {
                             placeholder="Costo del Flete"
                             onChange={handleInputChange} 
                             /> 
-                            <label className="w-full py-4 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Full </label>
+                            <label className="w-50 py-4 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Full </label>
                         </div>
                         <div className="flex items-center ps-4 border border-gray-200 rounded-sm dark:border-gray-700">
                         
@@ -279,7 +279,7 @@ export const FormularioCotizador = () => {
                             placeholder="Costo del Flete"
                             onChange={handleInputChange} 
                             />
-                            <label className="w-full py-4 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"> Jumbo
+                            <label className="w-50 py-4 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"> Jumbo
                         </label>
                     </div>
 
