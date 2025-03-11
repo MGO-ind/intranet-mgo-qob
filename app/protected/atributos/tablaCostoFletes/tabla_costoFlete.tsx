@@ -28,7 +28,7 @@ export default async function TableFlete() {
                                 <td>{flete.origen}</td>
                                 <td>{flete.destino}</td>
                                 <td>{flete.tallaenvio}</td>
-                                <td>$<input name='costo' id='costo' readOnly className='text-white text-center h-7 bg-zinc-800 rounded-full w-20' value={flete.costo} /></td>
+                                <td>$ {flete.costo}</td>
                                 <td className='mx-2 my-2'>
                                     <CopyButton costo={flete.costo} />
                                 </td>
