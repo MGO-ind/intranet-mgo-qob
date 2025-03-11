@@ -36,9 +36,10 @@ export default async function TableFlete() {
 
         
         
-        <table className="table-auto border rounded-l w-full">
+        <table className="table-auto border rounded-full p-2 w-full">
             <thead>
-                <tr>
+                <tr className='
+                bg-stone-900'>
                     <th>Origen</th>
                     <th>Destino</th>
                     <th>Tamaño de envio</th>
