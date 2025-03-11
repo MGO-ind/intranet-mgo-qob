@@ -39,7 +39,7 @@ export default async function TableFlete() {
         <table className="table-auto border rounded-xl p-2 w-full">
             <thead>
                 <tr className='
-                bg-stone-900'>
+                bg-stone-900 m-5 text-white text-center p-5'>
                     <th>Origen</th>
                     <th>Destino</th>
                     <th>Tamaño de envio</th>
