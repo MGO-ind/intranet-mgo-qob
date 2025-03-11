@@ -1,4 +1,5 @@
 import Footer from "../footer";
+import { ConsultaFletes } from "../tablaCostoFletes/fletes";
 import { CambioDolares } from "./cambio_dolares";
 
 import { FormularioCotizador } from "./formulario_cotizador";
@@ -11,6 +12,7 @@ export const GridCotizador = () => {
     
         <FormularioCotizador/>
         <CambioDolares/>
+        <ConsultaFletes/>
     </div>
     <Footer/>
     
