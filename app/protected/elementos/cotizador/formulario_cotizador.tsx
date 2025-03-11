@@ -187,7 +187,7 @@ export const FormularioCotizador = () => {
                         <input 
                             name="tipoDeCambio" 
                             placeholder="Tipo de Cambio" 
-                            className="w-6/12 text-black rounded-full text-sm sm:text-base h-8 sm:h-8 px-2 sm:px-5 m-2" 
+                            className="mt-1 block w-full text-black rounded-full border border-gray-700 px-3 py-2 placeholder-gray-400 shadow-sm focus:border-black focus:outline-none focus:ring-black sm:text-sm" 
                             type="number"
                             step="any"
                             
