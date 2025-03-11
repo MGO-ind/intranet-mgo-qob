@@ -1,6 +1,6 @@
 import { auth } from 'app/auth';
-import SideBarAdmin from './elementos/sidebar/sidebar_admin/sidebar_admin';
-import { Dashboard } from './elementos/dashboard/dashboard';
+import SideBarAdmin from './atributos/sidebar/sidebar_admin/sidebar_admin';
+import { Dashboard } from './atributos/dashboard/dashboard';
 
 export default async function ProtectedPage() {
   let session = await auth();

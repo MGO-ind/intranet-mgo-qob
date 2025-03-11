@@ -1,5 +1,5 @@
-import { Cotizador } from "../elementos/cotizador/cotizador";
-import SideBarAdmin from "../elementos/sidebar/sidebar_admin/sidebar_admin";
+import { Cotizador } from "../atributos/cotizador/cotizador";
+import SideBarAdmin from "../atributos/sidebar/sidebar_admin/sidebar_admin";
 
 
 
