@@ -1,3 +1,4 @@
+"use client"
 //import { insertCostoFlete } from "@/app/action";
 import { FormCostoFlete } from "@/app/formCostoFlete";
 import { createCosto, getCosto } from "@/app/schema";
@@ -17,7 +18,7 @@ export default function FormularioCostos() {
         let id_paqueteria = formData.get('id_paqueteria') as unknown as number;
         let flete = await getCosto(costo.toString());
 
-        if (origen === '' || destino === '' || tallaenvio === '' || costo === null || id_paqueteria === null) {
+        if (origen === '' || destino === '' || tallaenvio === '' ) {
             return console.log('Llena todos los campos');
         } else {
             if (flete.length > 0) {
