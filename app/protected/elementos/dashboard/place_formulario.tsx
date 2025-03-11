@@ -2,7 +2,7 @@
 //import { insertCostoFlete } from "@/app/action";
 import { FormCostoFlete } from "@/app/formCostoFlete";
 import { createCosto, getCosto } from "@/app/schema";
-import { SubmitButtonFlete, successCostoFlete } from "@/app/submit_button_flete";
+import { SubmitButtonFlete } from "@/app/submit_button_flete";
 import { redirect } from "next/navigation";
 import { FiFolder } from "react-icons/fi";
 
@@ -27,7 +27,7 @@ export default function FormularioCostos() {
         } else {
             await createCosto(origen, destino, tallaenvio, costo, id_paqueteria);
             redirect('/ProtectedPage');
-            successCostoFlete();
+  
 
             }       
             
