@@ -176,10 +176,14 @@ export const FormularioCotizador = () => {
                     </span>
                 </p>
                      
-                <form  name="formCotizador" id="formCotizador" onSubmit={handleForm} >
+                <form  name="formCotizador" id="formCotizador" onSubmit={handleForm} className="flex flex-col space-y-4 bg-zinc-800 px-2 py-5 sm:px-4">
                 
-                    <div className="row">
-                        <label>Tipo de Cambio: $</label>
+                    <div>
+                        <label 
+                        htmlFor="origen"
+                        className="block text-xs text-white uppercase">
+                        Tipo de Cambio: $
+                        </label>
                         <input 
                             name="tipoDeCambio" 
                             placeholder="Tipo de Cambio" 

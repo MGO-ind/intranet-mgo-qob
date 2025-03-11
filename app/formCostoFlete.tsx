@@ -22,6 +22,7 @@ export function FormCostoFlete({
             name="origen"
             className="mt-1 block w-full text-black rounded-full border border-gray-700 px-3 py-2 placeholder-gray-400 shadow-sm focus:border-black focus:outline-none focus:ring-black sm:text-sm"
             >
+                <option value={""}>Seleccione una opción</option>
                 <option>Brownsville</option>
                 <option>Monterrey</option>
                 <option>León</option>
@@ -40,6 +41,7 @@ export function FormCostoFlete({
             name="destino"
             className="mt-1 block w-full text-black rounded-full border border-gray-300 px-3 py-2 focus:outline-none placeholder-gray-700 shadow-sm focus:border-black  focus:ring-black sm:text-sm"
           >
+            <option value={""}>Seleccione una opción</option>
             <option>México</option>
             <option>León</option>
             <option>Salamanca</option>
@@ -97,7 +99,7 @@ export function FormCostoFlete({
             name="id_paqueteria"
             className="mt-1 block w-full text-black rounded-full border border-gray-300 px-3 py-2 placeholder-gray-700 shadow-sm focus:border-black focus:outline-none focus:ring-black sm:text-sm"
             >
-            <option value={""}>Seleccione una opcion</option>
+            <option value={""}>Seleccione una opción</option>
             <option value={1}>Paqueteria1</option>
           </select>
         
