@@ -1,6 +1,6 @@
 
 import {dbCosto, costoflete} from 'app/schema'
-import { CopyToClipboard } from 'react-copy-to-clipboard';
+
 import Swal from 'sweetalert2';
 
 export default async function TableFlete() {
@@ -50,9 +50,9 @@ export default async function TableFlete() {
                         <td>{flete.tallaenvio}</td>
                         <td>$<input name='costo' id='costo' readOnly className='text-white text-center h-7 bg-zinc-800 rounded-full w-20'  value={flete.costo}/></td>
                         <td className='mx-2 my-2'>
-                            <CopyToClipboard text={flete.costo}>
+                      
                                 <button className="rounded-full border-green-300 border  transition-colors hover:bg-green-500 dark:bg-green-700 text-sm sm:text-base h-8 w-32 sm:h-7 px-2 sm:px-5 m-2">Copiar</button>
-                            </CopyToClipboard>
+                        
                         </td>
                     </tr>
                 ))}
