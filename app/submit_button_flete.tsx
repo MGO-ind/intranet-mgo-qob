@@ -1,9 +1,12 @@
 'use client';
 
 import { useFormStatus } from 'react-dom';
+import Swal from "sweetalert2";
+
 
 export function SubmitButtonFlete({ children }: { children: React.ReactNode }) {
   const { pending } = useFormStatus();
+    
 
   return (
     <button
@@ -39,4 +42,31 @@ export function SubmitButtonFlete({ children }: { children: React.ReactNode }) {
       </span>
     </button>
   );
+}
+
+export function errorCostoFlete() {
+  return Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Costo ya existe',
+          color: "white",
+          background: "black",
+          customClass: {
+              popup: 'border-radius-0'
+          }
+      });
+  }
+export  function successCostoFlete() {
+    Swal.fire({
+        title: "Se ha guardado el costo",
+        text: "El costo ha sido guardado con éxito",
+        width: 600,
+        icon: "success",
+        padding: "3em",
+        color: "white",
+        background: "black",
+        customClass: {
+            popup: 'border-radius-0'
+        }
+    });
 }

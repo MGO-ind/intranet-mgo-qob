@@ -1,38 +1,13 @@
 //import { insertCostoFlete } from "@/app/action";
 import { FormCostoFlete } from "@/app/formCostoFlete";
 import { createCosto, getCosto } from "@/app/schema";
-import { SubmitButtonFlete } from "@/app/submit_button_flete";
+import { SubmitButtonFlete, successCostoFlete } from "@/app/submit_button_flete";
 import { redirect } from "next/navigation";
 import { FiFolder } from "react-icons/fi";
-import Swal from "sweetalert2";
+
 
 export default function FormularioCostos() {
-    async function errorCostoFlete() {
-    return Swal.fire({
-            icon: 'error',
-            title: 'Oops...',
-            text: 'Costo ya existe',
-            color: "white",
-            background: "black",
-            customClass: {
-                popup: 'border-radius-0'
-            }
-        });
-    }
-    function successCostoFlete() {
-        Swal.fire({
-            title: "Se ha guardado el costo",
-            text: "El costo ha sido guardado con éxito",
-            width: 600,
-            icon: "success",
-            padding: "3em",
-            color: "white",
-            background: "black",
-            customClass: {
-                popup: 'border-radius-0'
-            }
-        });
-    }
+  
     async function costoFlete(formData: FormData) {
         'use server';
         let origen = formData.get('origen') as string;
@@ -41,6 +16,8 @@ export default function FormularioCostos() {
         let costo = formData.get('costo') as unknown as number;
         let id_paqueteria = formData.get('id_paqueteria') as unknown as number;
         let flete = await getCosto(costo.toString()); 
+
+
 
         if (flete.length > 0) {
             return console.log('Costo ya existe');
@@ -51,6 +28,7 @@ export default function FormularioCostos() {
             await createCosto(origen, destino, tallaenvio, costo, id_paqueteria);
             redirect('/ProtectedPage');
             successCostoFlete();
+
             }
         }
 
