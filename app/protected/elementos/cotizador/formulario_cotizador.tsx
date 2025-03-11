@@ -275,7 +275,7 @@ export const FormularioCotizador = () => {
                     </div>
                     <div className="flex items-center ps-4 border border-gray-200 rounded-sm dark:border-gray-700">
                         
-                            <input className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" 
+                        <input className="w-4 h-4 text-stone-600 bg-gray-100 border-gray-300 focus:ring-stone-500 dark:focus:ring-stone-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" 
                             name="tam" 
                             radioGroup="tamano"
                             type="radio"
@@ -283,12 +283,12 @@ export const FormularioCotizador = () => {
                             value={"Full"}
                             placeholder="Costo del Flete"
                             onChange={handleInputChange} 
-                            /> 
-                            <label className="w-50 py-4 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Full </label>
-                        </div>
-                        <div className="flex items-center ps-4 border border-gray-200 rounded-sm dark:border-gray-700">
+                        /> 
+                        <label className="w-30 py-4 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"> Full </label>
+                    </div>
+                    <div className="flex items-center ps-4 border border-gray-200 rounded-sm dark:border-gray-700">
                         
-                            <input className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" 
+                        <input className="w-4 h-4 text-stone-600 bg-gray-100 border-gray-300 focus:ring-stone-500 dark:focus:ring-stone-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" 
                             name="tam" 
                             type="radio"
                             radioGroup="tamano"
@@ -297,8 +297,7 @@ export const FormularioCotizador = () => {
                             placeholder="Costo del Flete"
                             onChange={handleInputChange} 
                             />
-                            <label className="w-50 py-4 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"> Jumbo
-                        </label>
+                        <label className="w-30 py-4 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"> Jumbo</label>
                     </div>
 
                     <button className="rounded-full border-green-300 border  transition-colors hover:bg-green-500 dark:bg-green-700 text-sm sm:text-base h-8 w-full sm:h-10 px-2 sm:px-5 m-2" 
