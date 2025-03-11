@@ -1,6 +1,6 @@
 import {dbCosto, costoflete} from 'app/schema'
-import RefreshButton from './refresh_button';
 import Swal from 'sweetalert2';
+
 export default async function TableFlete() {
     let fletes: any[] = []
     try {
@@ -9,13 +9,14 @@ export default async function TableFlete() {
         console.error(e);
     }
 
-    const copiarValor=()=>{
-        const precio = document.createElement("input");
-        //precio.setAttribute("value", `${flete.costo}`);
-        document.body.appendChild(precio);
-        precio.select();
+    const copiarValor=(flete: any)=>{
+        const costo = document.createElement("textarea");
+        const precio = flete.costo;
+        costo.value = `${precio}`;
+        document.body.appendChild(costo);
+        costo.select();
         document.execCommand("copy");
-        document.body.removeChild(precio);
+        document.body.removeChild(costo);
         Swal.fire({
             position: "top-end",
             icon: "success",
@@ -54,7 +55,7 @@ export default async function TableFlete() {
                         <td>{flete.destino}</td>
                         <td>{flete.tallaenvio}</td>
                         <td>$<input name='costo' id='costo' readOnly className='text-white bg-zinc-800 rounded-full'  value={flete.costo}/></td>
-                        <td className='py-2 px-2 mx-1 my-1'><button className="rounded-full border-green-300 border  transition-colors hover:bg-green-500 dark:bg-green-700 text-sm sm:text-base h-8 w-full sm:h-7 px-2 sm:px-5 m-2" >Copiar</button></td>
+                        <td className='py-2 px-2 mx-1 my-1'><button className="rounded-full border-green-300 border  transition-colors hover:bg-green-500 dark:bg-green-700 text-sm sm:text-base h-8 w-full sm:h-7 px-2 sm:px-5 m-2" onClick={() => copiarValor(flete)}>Copiar</button></td>
                     </tr>
                 ))}
             </tbody>
