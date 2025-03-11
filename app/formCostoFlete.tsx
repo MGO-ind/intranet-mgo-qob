@@ -24,9 +24,9 @@ export function FormCostoFlete({
             className="mt-1 block w-full text-black rounded-full border border-gray-700 px-3 py-2 placeholder-gray-400 shadow-sm focus:border-black focus:outline-none focus:ring-black sm:text-sm"
             >
                 <option value={""}>Seleccione una opción</option>
-                <option>Brownsville</option>
-                <option>Monterrey</option>
-                <option>León</option>
+                <option value={"Brownsville"}>Brownsville</option>
+                <option value="Monterrey">Monterrey</option>
+                <option value={"León"}>León</option>
             </select>
         
         </div>
@@ -44,17 +44,17 @@ export function FormCostoFlete({
             className="mt-1 block w-full text-black rounded-full border border-gray-300 px-3 py-2 focus:outline-none placeholder-gray-700 shadow-sm focus:border-black  focus:ring-black sm:text-sm"
           >
             <option value={""}>Seleccione una opción</option>
-            <option>México</option>
-            <option>León</option>
-            <option>Salamanca</option>
-            <option>Tizayuca</option>
-            <option>Querétaro</option>
-            <option>Guadalajara</option>
-            <option>Monterrey</option>
-            <option>Aguascalientes</option>
-            <option>Lagos de Moreno</option>
-            <option>Ciudad de México</option>
-            <option>Mazatlán</option>
+            <option value={"México"}>México</option>
+            <option value={"León"}>León</option>
+            <option value={"Salamanca"}>Salamanca</option>
+            <option value={"Tizayuca"}>Tizayuca</option>
+            <option value={"Querétaro"}>Querétaro</option>
+            <option value={"Guadalajara"}>Guadalajara</option>
+            <option value={"Monterrey"}>Monterrey</option>
+            <option value={"Aguascalientes"}>Aguascalientes</option>
+            <option value={"Lagos de Moreno"}>Lagos de Moreno</option>
+            <option value={"Ciudad de México"}>Ciudad de México</option>
+            <option value={"Mazatlán"}>Mazatlán</option>
           </select>
         </div>
         <div>
@@ -70,8 +70,9 @@ export function FormCostoFlete({
             required
             className="mt-1 block w-full text-black rounded-full border border-gray-300 px-3 py-2 placeholder-gray-700 shadow-sm focus:border-black focus:outline-none focus:ring-black sm:text-sm"
           >
-            <option>Jumbo</option>
-            <option>Full</option>
+            <option value={""}>Seleccione una opción</option>
+            <option value={"Jumbo"}>Jumbo</option>
+            <option value={"Full"}>Full</option>
           </select>
         </div>
         <div>
