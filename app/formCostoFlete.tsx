@@ -20,6 +20,7 @@ export function FormCostoFlete({
           <select
             id="origen"
             name="origen"
+            required
             className="mt-1 block w-full text-black rounded-full border border-gray-700 px-3 py-2 placeholder-gray-400 shadow-sm focus:border-black focus:outline-none focus:ring-black sm:text-sm"
             >
                 <option value={""}>Seleccione una opción</option>
@@ -39,6 +40,7 @@ export function FormCostoFlete({
           <select
             id="destino"
             name="destino"
+            required
             className="mt-1 block w-full text-black rounded-full border border-gray-300 px-3 py-2 focus:outline-none placeholder-gray-700 shadow-sm focus:border-black  focus:ring-black sm:text-sm"
           >
             <option value={""}>Seleccione una opción</option>
@@ -65,6 +67,7 @@ export function FormCostoFlete({
           <select
             id="tallaenvio"
             name="tallaenvio"
+            required
             className="mt-1 block w-full text-black rounded-full border border-gray-300 px-3 py-2 placeholder-gray-700 shadow-sm focus:border-black focus:outline-none focus:ring-black sm:text-sm"
           >
             <option>Jumbo</option>
@@ -83,6 +86,7 @@ export function FormCostoFlete({
             step="any"
             id="costo"
             name="costo"
+            required
             className="mt-1 block w-full text-black appearance-none rounded-full border border-gray-300 px-3 py-2 placeholder-gray-700 shadow-sm focus:border-black focus:outline-none focus:ring-black sm:text-sm"
           />
            
@@ -97,6 +101,7 @@ export function FormCostoFlete({
           <select
             id="id_paqueteria"
             name="id_paqueteria"
+            required
             className="mt-1 block w-full text-black rounded-full border border-gray-300 px-3 py-2 placeholder-gray-700 shadow-sm focus:border-black focus:outline-none focus:ring-black sm:text-sm"
             >
             <option value={""}>Seleccione una opción</option>
