@@ -32,7 +32,7 @@ export default async function TableFlete() {
     }
     return (
         <>
-        <div className="col-span-12 rounded-3xl bg-zinc-800 items-center justify-items-center gap-12 font-[family-name:var(--font-geist-sans)]">
+        <div className="col-span-12 rounded-3xl bg-zinc-800 items-center justify-items-center gap-12 text-center font-[family-name:var(--font-geist-sans)]">
 
         
         
@@ -52,8 +52,8 @@ export default async function TableFlete() {
                         <td>{flete.origen}</td>
                         <td>{flete.destino}</td>
                         <td>{flete.tallaenvio}</td>
-                        <td><input name='costo' id='costo' readOnly className='text-white bg-black'  value={flete.costo}/></td>
-                        <td className='py-2 px-2 mx-1 my-1'><button className="rounded-full border-green-300 border  transition-colors hover:bg-green-500 dark:bg-green-700 text-sm sm:text-base h-8 w-full sm:h-10 px-2 sm:px-5 m-2" >Copiar</button></td>
+                        <td>$<input name='costo' id='costo' readOnly className='text-white bg-zinc-800 rounded-full'  value={flete.costo}/></td>
+                        <td className='py-2 px-2 mx-1 my-1'><button className="rounded-full border-green-300 border  transition-colors hover:bg-green-500 dark:bg-green-700 text-sm sm:text-base h-8 w-full sm:h-7 px-2 sm:px-5 m-2" >Copiar</button></td>
                     </tr>
                 ))}
             </tbody>
