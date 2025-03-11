@@ -11,8 +11,8 @@ export default async function TableFlete() {
 
     return (
         <>
-            <div className="col-span-12 my-3 bg-zinc-800 items-center justify-items-center gap-12 text-center font-[family-name:var(--font-geist-sans)]">
-                <table className="table border border-slate-50 rounded-xl p-2 w-full">
+            <div className="col-span-12 my-4 border-slate-50 rounded-xl bg-zinc-800 items-center justify-items-center gap-12 text-center font-[family-name:var(--font-geist-sans)]">
+                <table className="table border  p-2 w-full">
                     <thead>
                         <tr className='bg-stone-900 h-10 text-white text-center'>
                             <th>Origen</th>
