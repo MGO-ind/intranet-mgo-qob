@@ -15,11 +15,11 @@ export default async function TableFlete() {
                 <table className="w-full text-left table-auto min-w-max">
                     <thead>
                         <tr>
-                            <th className='p-4 border-b border-neutral-500 text-slate-300 bg-zinc-900'>Origen</th>
-                            <th className='p-4 border-b border-neutral-500 text-slate-300 bg-zinc-900'>Destino</th>
-                            <th className='p-4 border-b border-neutral-500 text-slate-300 bg-zinc-900'>Tamaño de envio</th>
-                            <th className='p-4 border-b border-neutral-500 text-slate-300 bg-zinc-900'>Costo</th>
-                            <th className='p-4 border-b border-neutral-500 text-slate-300 bg-zinc-900'>Copiar</th>
+                            <th className='p-4 border-b border-neutral-500 text-slate-100 bg-zinc-900'>Origen</th>
+                            <th className='p-4 border-b border-neutral-500 text-slate-100 bg-zinc-900'>Destino</th>
+                            <th className='p-4 border-b border-neutral-500 text-slate-100 bg-zinc-900'>Tamaño de envio</th>
+                            <th className='p-4 border-b border-neutral-500 text-slate-100 bg-zinc-900'>Costo</th>
+                            <th className='p-4 border-b border-neutral-500 text-slate-100 bg-zinc-900'>Copiar</th>
                         </tr>
                     </thead>
                     <tbody>
