@@ -10,7 +10,7 @@ export const RouteSelectAdmin = () => {
   return (
     <div className="space-y-1">
       <TransitionLink Icon={FiHome} selected={false} title="Inicio" href="/"/>
-      <TransitionLink Icon={FiPaperclip} selected={false} title="Registrar Flete" href=""/>
+      <TransitionLink Icon={FiPaperclip} selected={false} title="Registrar Flete" href="/protected/registro_flete"/>
       <TransitionLink Icon={FiDollarSign} selected={false} title="Cotizador" href="/protected/cotizador" />
       <TransitionLink Icon={GrDeliver} selected={false} title="Consultar Fletes" href="/protected/consultar_flete" />
       <TransitionLink Icon={MdOutlineInventory} selected={false} title="Inventario" href="/protected/inventario" />
