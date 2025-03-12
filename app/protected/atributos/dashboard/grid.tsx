@@ -1,6 +1,6 @@
 import Footer from "../footer";
-import FormularioCostos from "./place_formulario";
-import { TablaCostoFlete } from "./tabla_costo_flete";
+import FormularioCostos from "../registro_fletes/place_formulario";
+import { TablaCostoFlete } from "../registro_fletes/tabla_costo_flete";
 
 export const Grid = () => {
     return (
