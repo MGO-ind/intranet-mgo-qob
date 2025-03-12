@@ -284,7 +284,7 @@ export const FormularioCotizador = () => {
                             placeholder="Costo del Flete"
                             onChange={handleInputChange} 
                         /> 
-                        <label className="w-30 py-4 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"> Full </label>
+                        <label className="w-10 py-2 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"> Full </label>
                     </div>
                     <div className="flex items-center ps-2 border border-gray-200 rounded-sm dark:border-gray-700">
                         
@@ -297,7 +297,7 @@ export const FormularioCotizador = () => {
                             placeholder="Costo del Flete"
                             onChange={handleInputChange} 
                             />
-                        <label className="w-30 py-4 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"> Jumbo</label>
+                        <label className="w-10 py-2 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"> Jumbo</label>
                     </div>
 
                     <button className="rounded-full border-green-300 border  transition-colors hover:bg-green-500 dark:bg-green-700 text-sm sm:text-base h-8 w-full sm:h-10 px-2 sm:px-5 m-2" 
