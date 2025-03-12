@@ -15,20 +15,20 @@ export default async function TableFlete() {
                 <table className="w-full text-left table-auto min-w-max">
                     <thead>
                         <tr>
-                            <th className='p-4 border-b border-neutral-700 text-slate-300 bg-gray-800'>Origen</th>
-                            <th className='p-4 border-b border-neutral-700 text-slate-300 bg-gray-800'>Destino</th>
-                            <th className='p-4 border-b border-neutral-700 text-slate-300 bg-gray-800'>Tamaño de envio</th>
-                            <th className='p-4 border-b border-neutral-700 text-slate-300 bg-gray-800'>Costo</th>
-                            <th className='p-4 border-b border-neutral-700 text-slate-300 bg-gray-800'>Copiar</th>
+                            <th className='p-4 border-b border-neutral-500 text-slate-300 bg-zinc-900'>Origen</th>
+                            <th className='p-4 border-b border-neutral-500 text-slate-300 bg-zinc-900'>Destino</th>
+                            <th className='p-4 border-b border-neutral-500 text-slate-300 bg-zinc-900'>Tamaño de envio</th>
+                            <th className='p-4 border-b border-neutral-500 text-slate-300 bg-zinc-900'>Costo</th>
+                            <th className='p-4 border-b border-neutral-500 text-slate-300 bg-zinc-900'>Copiar</th>
                         </tr>
                     </thead>
                     <tbody>
                         {fletes && fletes.map((flete: any, index: number) => (
                             <tr className={index % 2 ? "bg-stone-600 text-sm hover:bg-black hover:text-white" : "text-sm hover:bg-black hover:text-white"} key={flete.id}>
-                                <td>{flete.origen}</td>
-                                <td>{flete.destino}</td>
-                                <td>{flete.tallaenvio}</td>
-                                <td>$ {flete.costo}</td>
+                                <td className="p-4">{flete.origen}</td>
+                                <td className="p-4">{flete.destino}</td>
+                                <td className="p-4">{flete.tallaenvio}</td>
+                                <td className="p-4">$ {flete.costo}</td>
                                 <td className='mx-2 my-2'>
                                     <CopyButton costo={flete.costo} />
                                 </td>
