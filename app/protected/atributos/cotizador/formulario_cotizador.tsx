@@ -290,7 +290,7 @@ export const FormularioCotizador = () => {
                             </div>
                         </li>
                         <li className="w-full border-b border-neutral-200 sm:border-b-0 sm:border-r dark:border-neutral-600">  
-                            <div className="flex items-center ps-2 border border-neutral-200 rounded-sm dark:border-neutral-700">
+                            <div className="flex items-center ps-3">
                                 <input className="w-4 h-4 text-neutral-600 bg-neutral-100 border-neutral-300 focus:ring-neutral-500 dark:focus:ring-neutral-600 dark:ring-offset-neutral-800 focus:ring-2 dark:bg-neutral-700 dark:border-neutral-600" 
                                 name="tam" 
                                 type="radio"
