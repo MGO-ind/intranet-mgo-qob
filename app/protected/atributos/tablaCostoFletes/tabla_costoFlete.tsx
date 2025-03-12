@@ -11,15 +11,15 @@ export default async function TableFlete() {
 
     return (
         <>
-            <div className="relative flex flex-col w-full h-full overflow-scroll text-slate-300 bg-slate-700 shadow-md rounded-lg bg-clip-border">
+            <div className="relative flex flex-col w-full h-full overflow-scroll text-slate-300 bg-gray-700 shadow-md rounded-lg bg-clip-border">
                 <table className="w-full text-left table-auto min-w-max">
                     <thead>
                         <tr>
-                            <th className='p-4 border-b border-slate-600 text-slate-300 bg-slate-800'>Origen</th>
-                            <th className='p-4 border-b border-slate-600 text-slate-300 bg-slate-800'>Destino</th>
-                            <th className='p-4 border-b border-slate-600 text-slate-300 bg-slate-800'>Tamaño de envio</th>
-                            <th className='p-4 border-b border-slate-600 text-slate-300 bg-slate-800'>Costo</th>
-                            <th className='p-4 border-b border-slate-600 text-slate-300 bg-slate-800'>Copiar</th>
+                            <th className='p-4 border-b border-slate-600 text-slate-300 bg-gray-800'>Origen</th>
+                            <th className='p-4 border-b border-slate-600 text-slate-300 bg-gray-800'>Destino</th>
+                            <th className='p-4 border-b border-slate-600 text-slate-300 bg-gray-800'>Tamaño de envio</th>
+                            <th className='p-4 border-b border-slate-600 text-slate-300 bg-gray-800'>Costo</th>
+                            <th className='p-4 border-b border-slate-600 text-slate-300 bg-gray-800'>Copiar</th>
                         </tr>
                     </thead>
                     <tbody>
