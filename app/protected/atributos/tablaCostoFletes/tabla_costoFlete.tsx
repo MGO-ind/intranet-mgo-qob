@@ -23,8 +23,8 @@ export default async function TableFlete() {
                         </tr>
                     </thead>
                     <tbody>
-                        {fletes && fletes.map((flete: any, index: number) => (
-                            <tr className={index % 2 ? "bg-stone-600 text-sm" : "text-sm hover:bg-dark hover:text-white"} key={flete.id}>
+                        {fletes && fletes.map((flete: any) => (
+                            <tr className="even:bg-blue-gray-50/50" key={flete.id}>
                                 <td>{flete.origen}</td>
                                 <td>{flete.destino}</td>
                                 <td>{flete.tallaenvio}</td>
