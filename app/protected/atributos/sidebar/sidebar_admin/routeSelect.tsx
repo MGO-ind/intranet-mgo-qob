@@ -2,6 +2,7 @@
 import { IconType } from "react-icons";
 import { FiDollarSign, FiHome, FiPaperclip } from "react-icons/fi";
 import { GrDeliver } from "react-icons/gr";
+import { MdOutlineInventory } from "react-icons/md";
 import Link from "next/link";
 
 
@@ -12,6 +13,7 @@ export const RouteSelectAdmin = () => {
       <TransitionLink Icon={FiPaperclip} selected={false} title="Inventario" href=""/>
       <TransitionLink Icon={FiDollarSign} selected={false} title="Cotizador" href="/protected/cotizador" />
       <TransitionLink Icon={GrDeliver} selected={false} title="Consultar Fletes" href="/protected/consultar_flete" />
+      <TransitionLink Icon={MdOutlineInventory} selected={false} title="Consultar Fletes" href="/protected/inventario" />
     </div>
   );
 };
