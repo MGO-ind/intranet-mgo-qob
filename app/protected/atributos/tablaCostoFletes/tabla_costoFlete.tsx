@@ -4,7 +4,7 @@ import CopyButton from './copyButton';
 export default async function TableFlete() {
     let fletes: any[] = [];
     try {
-        fletes = await dbCosto.select().from(costoflete);
+        fletes = await dbCosto.select().from(costoflete).orderBy(costoflete.destino);
     } catch (e: any) {
         console.error(e);
     }
