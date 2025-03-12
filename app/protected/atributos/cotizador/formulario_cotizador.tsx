@@ -273,7 +273,7 @@ export const FormularioCotizador = () => {
                             />
                        
                     </div>
-                    <div className="flex items-center ps-4 border border-gray-200 rounded-sm dark:border-gray-700">
+                    <div className="flex items-center ps-2 border border-gray-200 rounded-sm dark:border-gray-700">
                         
                         <input className="w-4 h-4 text-stone-600 bg-gray-100 border-gray-300 focus:ring-stone-500 dark:focus:ring-stone-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" 
                             name="tam" 
@@ -286,7 +286,7 @@ export const FormularioCotizador = () => {
                         /> 
                         <label className="w-30 py-4 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"> Full </label>
                     </div>
-                    <div className="flex items-center ps-4 border border-gray-200 rounded-sm dark:border-gray-700">
+                    <div className="flex items-center ps-2 border border-gray-200 rounded-sm dark:border-gray-700">
                         
                         <input className="w-4 h-4 text-stone-600 bg-gray-100 border-gray-300 focus:ring-stone-500 dark:focus:ring-stone-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" 
                             name="tam" 
