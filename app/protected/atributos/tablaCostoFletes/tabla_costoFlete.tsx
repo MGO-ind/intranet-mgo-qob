@@ -11,7 +11,7 @@ export default async function TableFlete() {
 
     return (
         <>
-            <div className="relative flex flex-col w-full h-full overflow-scroll text-slate-300 bg-slate-800 shadow-md rounded-lg bg-clip-border">
+            <div className="relative flex flex-col w-full h-full overflow-scroll text-slate-300 bg-slate-700 shadow-md rounded-lg bg-clip-border">
                 <table className="w-full text-left table-auto min-w-max">
                     <thead>
                         <tr>
@@ -23,8 +23,8 @@ export default async function TableFlete() {
                         </tr>
                     </thead>
                     <tbody>
-                        {fletes && fletes.map((flete: any) => (
-                            <tr className="even:bg-blue-gray-50/50" key={flete.id}>
+                        {fletes && fletes.map((flete: any, index: number) => (
+                            <tr className={index % 2 ? "bg-stone-600 text-sm hover:bg-black hover:text-white" : "text-sm hover:bg-black hover:text-white"} key={flete.id}>
                                 <td>{flete.origen}</td>
                                 <td>{flete.destino}</td>
                                 <td>{flete.tallaenvio}</td>
