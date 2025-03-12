@@ -11,20 +11,20 @@ export default async function TableFlete() {
 
     return (
         <>
-            <div className="col-span-12 my-4 border border-slate-50 rounded-xl bg-zinc-800 items-center justify-items-center gap-12 text-center font-[family-name:var(--font-geist-sans)]">
-                <table className="rounded-xl p-2 w-full">
+            <div className="relative flex flex-col w-full h-full overflow-scroll text-slate-300 bg-slate-800 shadow-md rounded-lg bg-clip-border">
+                <table className="w-full text-left table-auto min-w-max">
                     <thead>
-                        <tr className='bg-stone-900 h-10 text-white text-center'>
-                            <th>Origen</th>
-                            <th>Destino</th>
-                            <th>Tamaño de envio</th>
-                            <th>Costo</th>
-                            <th>Copiar</th>
+                        <tr>
+                            <th className='p-4 border-b border-slate-600 text-slate-300 bg-slate-800'>Origen</th>
+                            <th className='p-4 border-b border-slate-600 text-slate-300 bg-slate-800'>Destino</th>
+                            <th className='p-4 border-b border-slate-600 text-slate-300 bg-slate-800'>Tamaño de envio</th>
+                            <th className='p-4 border-b border-slate-600 text-slate-300 bg-slate-800'>Costo</th>
+                            <th className='p-4 border-b border-slate-600 text-slate-300 bg-slate-800'>Copiar</th>
                         </tr>
                     </thead>
                     <tbody>
                         {fletes && fletes.map((flete: any, index: number) => (
-                            <tr className={index % 2 ? "bg-stone-600 text-sm" : "text-sm"} key={flete.id}>
+                            <tr className={index % 2 ? "bg-stone-600 text-sm" : "text-sm hover:bg-dark hover:text-white"} key={flete.id}>
                                 <td>{flete.origen}</td>
                                 <td>{flete.destino}</td>
                                 <td>{flete.tallaenvio}</td>
