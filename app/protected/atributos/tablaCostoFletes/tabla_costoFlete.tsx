@@ -37,7 +37,7 @@ export default async function TableFlete() {
                     </tbody>
                 </table>
                 <div className="flex justify-between items-center px-4 py-3">
-                    <div className="text-sm text-slate-500">
+                    <div className="text-sm text-slate-200">
                     Mostrando <b>1-5</b> de 45
                     </div>
                     <div className="flex space-x-1">
