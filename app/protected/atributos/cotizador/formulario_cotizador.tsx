@@ -274,36 +274,36 @@ export const FormularioCotizador = () => {
                        
                     </div>
                     
-                    <ul className="items-center w-full text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg sm:flex dark:bg-gray-700 dark:border-gray-600 dark:text-white">
-                      <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600">  
-                      <div className="flex items-center ps-3">
-                        <input className="w-4 h-4 text-stone-600 bg-gray-100 border-gray-300 focus:ring-stone-500 dark:focus:ring-stone-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" 
-                            name="tam" 
-                            radioGroup="tamano"
-                            type="radio"
-                            step="any"
-                            value={"Full"}
-                            placeholder="Costo del Flete"
-                            onChange={handleInputChange} 
-                        /> 
-                        <label className="w-10 py-2 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"> Full </label>
-                        </div>
+                    <ul className="items-center w-full text-sm font-medium text-neutral-900 bg-white border border-neutral-200 rounded-3xl sm:flex dark:bg-neutral-700 dark:border-neutral-600 dark:text-white">
+                        <li className="w-full border-b border-neutral-200 sm:border-b-0 sm:border-r dark:border-neutral-600">
+                            <div className="flex items-center ps-3">
+                                <input className="w-4 h-4 text-neutral-600 bg-neutral-100 border-neutral-300 focus:ring-neutral-500 dark:focus:ring-neutral-600 dark:ring-offset-neutral-800 focus:ring-2 dark:bg-neutral-700 dark:border-neutral-600" 
+                                name="tam" 
+                                radioGroup="tamano"
+                                type="radio"
+                                step="any"
+                                value={"Full"}
+                                placeholder="Costo del Flete"
+                                onChange={handleInputChange} 
+                                /> 
+                                <label className="w-10 py-2 ms-2 text-sm font-medium text-neutral-900 dark:text-neutral-300"> Full </label>
+                            </div>
                         </li>
-                        <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600">  
-                        <div className="flex items-center ps-2 border border-gray-200 rounded-sm dark:border-gray-700">
-                        <input className="w-4 h-4 text-stone-600 bg-gray-100 border-gray-300 focus:ring-stone-500 dark:focus:ring-stone-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" 
-                            name="tam" 
-                            type="radio"
-                            radioGroup="tamano"
-                            step="any"
-                            value={"Jumbo"}
-                            placeholder="Costo del Flete"
-                            onChange={handleInputChange} 
-                            />
-                        <label className="w-10 py-2 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"> Jumbo</label>
-                        </div>
+                        <li className="w-full border-b border-neutral-200 sm:border-b-0 sm:border-r dark:border-neutral-600">  
+                            <div className="flex items-center ps-2 border border-neutral-200 rounded-sm dark:border-neutral-700">
+                                <input className="w-4 h-4 text-neutral-600 bg-neutral-100 border-neutral-300 focus:ring-neutral-500 dark:focus:ring-neutral-600 dark:ring-offset-neutral-800 focus:ring-2 dark:bg-neutral-700 dark:border-neutral-600" 
+                                name="tam" 
+                                type="radio"
+                                radioGroup="tamano"
+                                step="any"
+                                value={"Jumbo"}
+                                placeholder="Costo del Flete"
+                                onChange={handleInputChange} 
+                                />
+                                <label className="w-10 py-2 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"> Jumbo</label>
+                            </div>
                         </li>
-                        </ul>
+                    </ul>
 
                     <button className="rounded-full border-green-300 border  transition-colors hover:bg-green-500 dark:bg-green-700 text-sm sm:text-base h-8 w-full sm:h-10 px-2 sm:px-5 m-2" 
                         type="submit">Calcular</button>
