@@ -1,5 +1,5 @@
 import { RegistroDatosUsuario } from "../atributos/registro_datos_usuario/registro_datos_usuario";
-import SideBarAdmin from "../atributos/sidebar/sidebar_admin/sidebar_admin";
+import {SideBarAdmin} from "../atributos/sidebar/sidebar_admin/sidebar";
 
 export default function Home() {
     return (

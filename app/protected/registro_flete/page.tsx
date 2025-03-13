@@ -1,5 +1,5 @@
 import { RegistroFletes } from "../atributos/registro_fletes/registro_fletes";
-import SideBarAdmin from "../atributos/sidebar/sidebar_admin/sidebar_admin";
+import { SideBarAdmin } from "../atributos/sidebar/sidebar_admin/sidebar";
 
 
 export default function Home() {

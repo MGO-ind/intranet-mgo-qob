@@ -1,4 +1,4 @@
-import SideBarAdmin from "../atributos/sidebar/sidebar_admin/sidebar_admin";
+import {SideBarAdmin} from "../atributos/sidebar/sidebar_admin/sidebar";
 import { ConsultaFletes } from "../atributos/tablaCostoFletes/fletes";
 
 

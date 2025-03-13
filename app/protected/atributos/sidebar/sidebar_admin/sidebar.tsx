@@ -1,12 +1,9 @@
 import { Plan } from "../plan";
 import { AccountAdminToggle } from "./account_Admin_Toggle";
-import { RouteSelectAdmin } from "./routeSelect";
+import { RouteSelectAdmin } from "./routeSelectAdmin";
 
 
-
-
-
-export default function SideBarAdmin() {
+export function SideBarAdmin(){
 
   return (
     <div className="font-[family-name:var(--font-geist-mono)]">
