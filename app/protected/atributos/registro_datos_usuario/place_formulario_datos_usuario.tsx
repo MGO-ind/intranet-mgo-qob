@@ -18,7 +18,7 @@ export default function FormularioDatosUsuario() {
     }
     else {
         await createDatosUsuario(nombre, apellido, correo, nivel);
-        redirect('/ProtectedPage');
+        redirect('/protected/registro_datos_usuario');
     }
     }
     return (
