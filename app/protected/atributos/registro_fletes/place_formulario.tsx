@@ -17,24 +17,15 @@ export default function FormularioCostos() {
         let costo = formData.get('costo') as unknown as number;
         let id_paqueteria = formData.get('id_paqueteria') as unknown as number;
         let flete = await getCosto(costo.toString());
-
-       
+    
         if (flete.length > 0) {
-            return console.log('Costo ya existe');
-            
-            
+            return console.log('Costo ya existe');              
                 // TODO: Handle errors with useFormStatus - return 'Costo ya existe';
         } else {
             await createCosto(origen, destino, tallaenvio, costo, id_paqueteria);
             redirect('/ProtectedPage');
-  
-
-            }       
-            
-       
-        
+        }             
     }
-
 
     return (
         <div className="lg:col-span-4 sm:col-span-12 rounded-3xl bg-zinc-800 border border-stone-500 shadow-lg h-[auto] sm:h-auto overflow-y-scroll scrollbar-thin">
@@ -48,19 +39,10 @@ export default function FormularioCostos() {
                 </h3>
             </div>
             <div className="h-[auto] sm:h-auto px-4 flex-row items-center ">
-            <FormCostoFlete action={costoFlete}>
-            <SubmitButtonFlete>Capturar</SubmitButtonFlete>
-
-            </FormCostoFlete>
-        
-
-   
-
+                <FormCostoFlete action={costoFlete}>
+                    <SubmitButtonFlete>Capturar</SubmitButtonFlete>
+                </FormCostoFlete>
             </div>
-
-
-
         </div>
-
     );
 }

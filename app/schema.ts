@@ -62,7 +62,7 @@ export const costoflete = pgTable('costofletes', {
   id_paqueteria: numeric('id_paqueteria'),
 });
 
-export const dbCosto = drizzle(client)
+export const dbTablas = drizzle(client)
 
 /*export const users = pgTable('costofletes', {
     id: serial('id').primaryKey(),

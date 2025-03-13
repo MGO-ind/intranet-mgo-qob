@@ -1,10 +1,10 @@
-import { dbCosto, costoflete } from 'app/schema';
+import { dbTablas, costoflete } from 'app/schema';
 import CopyButton from './copyButton';
 
 export default async function TableFlete() {
     let fletes: any[] = [];
     try {
-        fletes = await dbCosto.select().from(costoflete).orderBy(costoflete.destino);
+        fletes = await dbTablas.select().from(costoflete).orderBy(costoflete.destino);
     } catch (e: any) {
         console.error(e);
     }
