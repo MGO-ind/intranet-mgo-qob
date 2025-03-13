@@ -7,6 +7,8 @@ import postgres from 'postgres';
 let client = postgres(`${process.env.POSTGRES_URL!}?sslmode=require`);
 let db = drizzle(client);
 
+export const dbTablas = drizzle(client)
+
 export async function getCosto(costo: string) {
   const costofletes = await ensureTableFleteExists();
   return await db.select().from(costofletes).where(eq(costofletes.costo, costo));
@@ -62,7 +64,6 @@ export const costoflete = pgTable('costofletes', {
   id_paqueteria: numeric('id_paqueteria'),
 });
 
-export const dbTablas = drizzle(client)
 
 /*export const users = pgTable('costofletes', {
     id: serial('id').primaryKey(),
@@ -75,6 +76,11 @@ export const dbTablas = drizzle(client)
 */
 
 export async function getDatosUsuario(correo: string) {
+  const datosUsuario = await ensureTableDatosUsuarioExists();
+  return await db.select().from(datosUsuario).where(eq(datosUsuario.correo, correo));
+}
+
+export async function getUsuario(correo: string) {
   const datosUsuario = await ensureTableDatosUsuarioExists();
   return await db.select().from(datosUsuario).where(eq(datosUsuario.correo, correo));
 }

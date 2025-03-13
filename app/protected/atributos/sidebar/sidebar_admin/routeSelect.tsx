@@ -1,4 +1,3 @@
-
 import { IconType } from "react-icons";
 import { FiDollarSign, FiHome } from "react-icons/fi";
 import { GrDeliver } from "react-icons/gr";
@@ -6,9 +5,25 @@ import { MdOutlineInventory } from "react-icons/md";
 import Link from "next/link";
 import { FaPen } from "react-icons/fa";
 import { LuPackage } from "react-icons/lu";
+import { auth } from "@/app/auth";
+import { getUsuario } from "@/app/schema";
 
+export const RouteSelectAdmin = async () => {
+  let session = await auth();
+  let correo = session?.user?.email;
 
-export const RouteSelectAdmin = () => {
+  let usuario: any[] = [];
+  if (correo) {
+      try {
+          usuario = await getUsuario(correo);
+      }
+      catch (e: any) {
+          console.error(e);
+      }
+  } else {
+      console.error("Correo is undefined or null");
+  }
+
   return (
     <div className="space-y-1">
       <TransitionLink Icon={FiHome} title="Inicio" href="/"/>
