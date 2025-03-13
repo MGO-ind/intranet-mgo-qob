@@ -5,16 +5,18 @@ import { GrDeliver } from "react-icons/gr";
 import { MdOutlineInventory } from "react-icons/md";
 import Link from "next/link";
 import { FaPen } from "react-icons/fa";
+import { LuPackage } from "react-icons/lu";
 
 
 export const RouteSelectAdmin = () => {
   return (
     <div className="space-y-1">
       <TransitionLink Icon={FiHome} title="Inicio" href="/"/>
-      <TransitionLink Icon={FaPen} title="Registrar Flete" href="/protected/registro_flete"/>
+      <TransitionLink Icon={LuPackage} title="Registrar Flete" href="/protected/registro_flete"/>
       <TransitionLink Icon={FiDollarSign} title="Cotizador" href="/protected/cotizador" />
       <TransitionLink Icon={GrDeliver} title="Consultar Fletes" href="/protected/consultar_flete" />
       <TransitionLink Icon={MdOutlineInventory} title="Inventario" href="/protected/inventario" />
+      <TransitionLink Icon={FaPen} title="Datos Usuario" href="/protected/registro_datos_usuario" />
     </div>
   );
 };

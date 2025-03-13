@@ -74,50 +74,51 @@ export const dbCosto = drizzle(client)
   });
 */
 
-export async function getDatosEmpleado(correo: string) {
-  const datosEmpleado = await ensureTableDatosEmpleadoExists();
-  return await db.select().from(datosEmpleado).where(eq(datosEmpleado.correo, correo));
+export async function getDatosUsuario(correo: string) {
+  const datosUsuario = await ensureTableDatosUsuarioExists();
+  return await db.select().from(datosUsuario).where(eq(datosUsuario.correo, correo));
 }
 
-
-export async function createDatosEpleado(nombre: string, apellido: string, correo: string) {
-  const datosEmpleado = await ensureTableDatosEmpleadoExists();
-  return await db.insert(datosEmpleado).values([{ nombre, apellido, correo}]);
+export async function createDatosUsuario(nombre: string, apellido: string, correo: string, nivel: string) {
+  const datosUsuario = await ensureTableDatosUsuarioExists();
+  return await db.insert(datosUsuario).values([{ nombre, apellido, nivel, correo }]);
 }
 
-
-async function ensureTableDatosEmpleadoExists() {
+async function ensureTableDatosUsuarioExists() {
   const result = await client`
     SELECT EXISTS (
       SELECT FROM information_schema.tables 
       WHERE table_schema = 'public' 
-      AND table_name = 'datosEmpleado'
+      AND table_name = 'datosUsuario'
     );`;
 
   if (!result[0].exists) {
     await client`
-      CREATE TABLE "datosEmpleado" (
+      CREATE TABLE "datosUsuario" (
         id SERIAL PRIMARY KEY,
         nombre TEXT,
         apellido TEXT,
+        nivel TEXT,
         correo TEXT
       );`;
   }
 
-  const table = pgTable('datosEmpleado', {
+  const tableDatosUsuario = pgTable('datosUsuario', {
     id: serial('id').primaryKey(),
     nombre: text('origen'),
     apellido: text('destino'),
+    nivel: text('nivel'),
     correo: text('tallaenvio'),
   });
 
-  return table;
+  return tableDatosUsuario;
 }
 
-export const datosEmpleado = pgTable('datosEmpleado', {
+export const datosUsuario = pgTable('datosUsuario', {
   id: serial('id').primaryKey(),
   nombre: text('origen'),
   apellido: text('destino'),
+  nivel: text('nivel'),
   correo: text('tallaenvio'),
 });
 
