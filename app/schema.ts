@@ -105,10 +105,10 @@ async function ensureTableDatosUsuarioExists() {
 
   const tableDatosUsuario = pgTable('datosUsuario', {
     id: serial('id').primaryKey(),
-    nombre: text('origen'),
-    apellido: text('destino'),
+    nombre: text('nombre'),
+    apellido: text('apellido'),
     nivel: text('nivel'),
-    correo: text('tallaenvio'),
+    correo: text('correo'),
   });
 
   return tableDatosUsuario;
@@ -116,10 +116,10 @@ async function ensureTableDatosUsuarioExists() {
 
 export const datosUsuario = pgTable('datosUsuario', {
   id: serial('id').primaryKey(),
-  nombre: text('origen'),
-  apellido: text('destino'),
+  nombre: text('nombre'),
+  apellido: text('apellido'),
   nivel: text('nivel'),
-  correo: text('tallaenvio'),
+  correo: text('correo'),
 });
 
 

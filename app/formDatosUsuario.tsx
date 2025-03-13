@@ -37,21 +37,7 @@ export function FormDatosUsuario({
             required
             className="mt-1 block w-full text-black rounded-full border border-gray-700 px-3 py-2 placeholder-gray-400 shadow-sm focus:border-black focus:outline-none focus:ring-black sm:text-sm"
           />
-        </div>
-        <div>
-          <label
-            htmlFor="correo"
-            className="block text-xs text-white uppercase"
-          >
-            Correo
-          </label>
-          <input
-            id="correo"
-            name="correo"
-            required
-            className="mt-1 block w-full text-black rounded-full border border-gray-700 px-3 py-2 placeholder-gray-400 shadow-sm focus:border-black focus:outline-none focus:ring-black sm:text-sm"
-          />
-        </div>
+        </div>     
         <div>
           <label
             htmlFor="nivel"
@@ -66,11 +52,25 @@ export function FormDatosUsuario({
             className="mt-1 block w-full text-black rounded-full border border-gray-700 px-3 py-2 placeholder-gray-400 shadow-sm focus:border-black focus:outline-none focus:ring-black sm:text-sm"
           >
                 <option value={""}>Seleccione una opción</option>
-                <option value={"n1"}>Administrador</option>
+                <option value={"na1"}>Administrador</option>
                 <option value={"n1"}>Nivel 1</option>
                 <option value={"n2"}>Nivel 2</option>
                 <option value={"n3"}>Nivel 3</option>
             </select>
+        </div>
+        <div>
+          <label
+            htmlFor="correo"
+            className="block text-xs text-white uppercase"
+          >
+            Correo
+          </label>
+          <input
+            id="correo"
+            name="correo"
+            required
+            className="mt-1 block w-full text-black rounded-full border border-gray-700 px-3 py-2 placeholder-gray-400 shadow-sm focus:border-black focus:outline-none focus:ring-black sm:text-sm"
+          />
         </div>
         {children}
       </form>
