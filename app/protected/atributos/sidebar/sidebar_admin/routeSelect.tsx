@@ -13,27 +13,33 @@ export const RouteSelectAdmin = async () => {
   let correo = session?.user?.email;
 
   let usuario: any[] = [];
+
   if (correo) {
-      try {
-          usuario = await getUsuario(correo);
-      }
-      catch (e: any) {
-          console.error(e);
-      }
+    try {
+      usuario = await getUsuario(correo);
+      return console.log(usuario[0].nivel) 
+    }
+    catch (e: any) {
+      console.error(e);
+    }
   } else {
       console.error("Correo is undefined or null");
   }
+  
 
   return (
-    <div className="space-y-1">
-      <TransitionLink Icon={FiHome} title="Inicio" href="/"/>
-      <TransitionLink Icon={LuPackage} title="Registrar Flete" href="/protected/registro_flete"/>
-      <TransitionLink Icon={FiDollarSign} title="Cotizador" href="/protected/cotizador" />
-      <TransitionLink Icon={GrDeliver} title="Consultar Fletes" href="/protected/consultar_flete" />
-      <TransitionLink Icon={MdOutlineInventory} title="Inventario" href="/protected/inventario" />
-      <TransitionLink Icon={FaPen} title="Datos Usuario" href="/protected/registro_datos_usuario" />
-    </div>
-  );
+
+  <div className="space-y-1">
+    <TransitionLink Icon={FiHome} title="Inicio" href="/" />
+    <TransitionLink Icon={LuPackage} title="Registrar Flete" href="/protected/registro_flete" />
+    <TransitionLink Icon={FiDollarSign} title="Cotizador" href="/protected/cotizador" />
+    <TransitionLink Icon={GrDeliver} title="Consultar Fletes" href="/protected/consultar_flete" />
+    <TransitionLink Icon={MdOutlineInventory} title="Inventario" href="/protected/inventario" />
+    <TransitionLink Icon={FaPen} title="Datos Usuario" href="/protected/registro_datos_usuario" />
+  </div>
+
+  )
+
 };
 
 const TransitionLink = ({
