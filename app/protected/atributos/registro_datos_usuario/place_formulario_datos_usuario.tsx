@@ -2,6 +2,7 @@ import { FormDatosUsuario } from "@/app/formDatosUsuario";
 import { SubmitButton } from "@/app/submit-button";
 import { createDatosUsuario, getDatosUsuario } from "@/app/schema";
 import { FiUser } from "react-icons/fi";
+import { redirect } from "next/navigation";
 
 export default function FormularioDatosUsuario() {
   async function datosUsuario(formData: FormData) {
@@ -17,6 +18,7 @@ export default function FormularioDatosUsuario() {
     }
     else {
         await createDatosUsuario(nombre, apellido, correo, nivel);
+        redirect('/ProtectedPage');
     }
     }
     return (
