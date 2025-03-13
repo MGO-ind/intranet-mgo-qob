@@ -3,7 +3,7 @@ import { dbTablas, datosUsuario } from "@/app/schema";
 export default async function TablaDatosUsuarios() {
     let usuarios: any[] = [];
     try {
-        usuarios = await dbTablas.select().from(datosUsuario).orderBy(datosUsuario.nombre);
+        usuarios = await dbTablas.select().from(datosUsuario).orderBy(datosUsuario.apellido);
     }
     catch (e: any) {
         console.error(e);
