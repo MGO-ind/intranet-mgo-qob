@@ -4,6 +4,7 @@ import { FiDollarSign, FiHome } from "react-icons/fi";
 import { MdOutlineInventory } from "react-icons/md";
 import Link from "next/link";
 import { LuPackage } from "react-icons/lu"
+import { GrDeliver } from "react-icons/gr";
 
 export const RouteSelectNivel1 = () => {
   return (
@@ -12,6 +13,7 @@ export const RouteSelectNivel1 = () => {
       <TransitionLink Icon={LuPackage} title="Registrar Flete" href="/protected/registro_flete"/>
       <TransitionLink Icon={FiDollarSign} title="Cotizador" href="/protected/cotizador" />
       <TransitionLink Icon={MdOutlineInventory} title="Inventario" href="/protected/inventario" />
+      <TransitionLink Icon={GrDeliver} title="Consultar Fletes" href="/protected/consultar_flete" />
     </div>
   );
 };
