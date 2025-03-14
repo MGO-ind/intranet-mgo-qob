@@ -3,7 +3,6 @@ import { getUsuario } from "@/app/schema";
 
 export const AccountAdminToggle = async () => {
     let session = await auth();
-
     let correo = session?.user?.email;
     let usuarios: any[] = [];
     let nameUsuario: string | undefined;
