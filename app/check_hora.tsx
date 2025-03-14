@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 
 export const CheckHora = () => {
-    const hora = new Date().getHours();
+    const hora = new Date().getHours() + ':' + new Date().getMinutes() ;
     
     const [texto, setTexto] = useState('Entrada');
 
