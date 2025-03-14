@@ -3,7 +3,7 @@ import { Dashboard } from './atributos/dashboard/dashboard';
 import { SideBarAdmin } from './atributos/sidebar/sidebar_admin/sidebar';
 import { getUsuario} from '../schema';
 import { SideBarN1 } from './atributos/sidebar/sidebar_nivel1/sidebar_n1';
-
+import { SideBarGral } from './atributos/sidebar/sidebar_general/sidebar_gral';
 
 export default async function ProtectedPage() {
   let session = await auth();
@@ -21,31 +21,17 @@ export default async function ProtectedPage() {
         nivelUsuario = usuarios[0].nivel; // Asignar el nivel del primer usuario a la variable
       }
     }
-
   }
   catch (error) {
     console.error(error);
   }
 
-
   return (
     <main className="grid bg-black text-white gap-4 p-4 grid-cols-[220px,_1fr]">
-     {nivelUsuario ==='na1' ?<SideBarAdmin/>:"" }
-     {nivelUsuario ==='n1' ?<SideBarN1/>:"" }
+    {nivelUsuario ==='na1' ?<SideBarAdmin/>: <SideBarGral/> }
+    {nivelUsuario ==='n1' ?<SideBarN1/>: <SideBarGral/> }
 
     <Dashboard />
-   
-    
-
-    {usuarios.map((usuario) => (
-          <div key={usuario.id}>
-            <p>ID: {usuario.id}</p>
-            <p>Nombre: {usuario.nombre}</p>
-            <p>Apellido: {usuario.apellido}</p>
-            <p>Nivel: {usuario.nivel}</p>
-            <p>Correo: {usuario.correo}</p>
-          </div>
-        ))}
 
   </main> 
   );
@@ -54,6 +40,17 @@ export default async function ProtectedPage() {
 /*
 {usuarios.map((usuario) => (
           <p key={usuario.id}>Nivel: {usuario.nivel}</p>
+        ))}
+
+//mapeo de la informacion de usuarios
+        {usuarios.map((usuario) => (
+          <div key={usuario.id}>
+            <p>ID: {usuario.id}</p>
+            <p>Nombre: {usuario.nombre}</p>
+            <p>Apellido: {usuario.apellido}</p>
+            <p>Nivel: {usuario.nivel}</p>
+            <p>Correo: {usuario.correo}</p>
+          </div>
         ))}
 
 
