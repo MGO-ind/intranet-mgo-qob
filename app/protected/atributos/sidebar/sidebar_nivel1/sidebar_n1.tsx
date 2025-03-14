@@ -4,7 +4,7 @@ import { RouteSelectNivel1 } from "./routeSelectN1";
 
 
 
-export function SideBarAdmin(){
+export function SideBarN1(){
 
   return (
     <div className="font-[family-name:var(--font-geist-mono)]">
