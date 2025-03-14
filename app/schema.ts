@@ -128,6 +128,14 @@ export const datosUsuario = pgTable('datosUsuario', {
   correo: text('correo'),
 });
 
+export const datosUsuario1 = pgTable('datosUsuario', {
+  id: serial('id').primaryKey(),
+  nombre: text('nombre'),
+  apellido: text('apellido'),
+  nivel: text('nivel'),
+  correo: text('correo'),
+});
+
 
 
 

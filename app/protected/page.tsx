@@ -1,20 +1,26 @@
 import { auth } from 'app/auth';
 import { Dashboard } from './atributos/dashboard/dashboard';
 import { SideBarAdmin } from './atributos/sidebar/sidebar_admin/sidebar';
+import { datosUsuario, dbTablas, getUsuario} from '../schema';
+
 
 export default async function ProtectedPage() {
   let session = await auth();
   let correo = session?.user?.email;
   let usuarios: any[] = [];
+  
   try {
-    const response = await fetch('/api/usuarios');
-    usuarios = await response.json();
+    correo?.toString();
+    if (correo) {
+      const usuarioResponse = await getUsuario(correo);
+      usuarios = usuarioResponse;
+    }
+
   }
   catch (error) {
     console.error(error);
   }
 
-  
 
   return (
     <main className="grid bg-black text-white gap-4 p-4 grid-cols-[220px,_1fr]">
