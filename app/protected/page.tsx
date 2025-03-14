@@ -4,6 +4,8 @@ import { SideBarAdmin } from './atributos/sidebar/sidebar_admin/sidebar';
 
 export default async function ProtectedPage() {
   let session = await auth();
+  let correo = session?.user?.email;
+  console.log(correo);
 
   return (
     <main className="grid bg-black text-white gap-4 p-4 grid-cols-[220px,_1fr]">
