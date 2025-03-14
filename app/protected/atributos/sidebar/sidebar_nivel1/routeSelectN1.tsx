@@ -29,7 +29,7 @@ const TransitionLink = ({
 }) => {
   return (
     <Link href={href}
-      className={`flex items-center justify-start gap-2 w-full rounded-full px-2 py-1.5 text-sm text-stone-50 transition-[box-shadow,_background-color,_color] hover:bg-slate-200 bg-transparent hover:text-stone-900 shadow-none `}
+      className={`flex items-center justify-start gap-2 w-full rounded-full px-2 py-1.5 text-sm text-stone-50 transition-[box-shadow,_background-color,_color]  hover:bg-slate-200 bg-transparent hover:text-stone-900 shadow-none `}
     >
       <Icon />
       <span>{title}</span>
