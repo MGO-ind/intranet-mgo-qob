@@ -4,7 +4,7 @@ import { getUsuario } from "@/app/schema";
 
 export const TopBar = async () => {
   const currentDat = new Date();
-  //Fecha completa separada por / slash
+//  Fecha completa separada por / slash
 //  const currentDate = currentDat.toLocaleDateString("en-US");
 
   const day = currentDat.getDate();
@@ -34,14 +34,12 @@ export const TopBar = async () => {
     catch (error) {
       console.error(error);
     }
-  
-  
-  
+
   return ( 
     <div className="border-b px-4 mb-4 mt-2 pb-4 border-stone-200">
     <div className="flex items-center justify-between p-0.5">
       <div>
-          <span className="text-sm font-bold block">🚀 Buen día, {nameUsuario}! </span> {session?.user?.id}
+          <span className="text-sm font-bold block">🚀 Buen día, {nameUsuario} ! </span> {session?.user?.id}
         <span className="text-sm block text-stone-200">
         {day} de {montName} de {year} 
         </span>

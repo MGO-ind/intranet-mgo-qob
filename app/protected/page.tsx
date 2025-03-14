@@ -3,7 +3,8 @@ import { Dashboard } from './atributos/dashboard/dashboard';
 import { SideBarAdmin } from './atributos/sidebar/sidebar_admin/sidebar';
 import { getUsuario} from '../schema';
 import { SideBarN1 } from './atributos/sidebar/sidebar_nivel1/sidebar_n1';
-import { SideBarGral } from './atributos/sidebar/sidebar_general/sidebar_gral';
+import { SideBarN2 } from './atributos/sidebar/sidebar_nivel2/sidebar_n2';
+import { SideBarN3 } from './atributos/sidebar/sidebar_nivel3/sidebar_n3';
 
 export default async function ProtectedPage() {
   let session = await auth();
@@ -30,6 +31,8 @@ export default async function ProtectedPage() {
     <main className="grid bg-black text-white gap-4 p-4 grid-cols-[220px,_1fr]">
     {nivelUsuario ==='na1' ?<SideBarAdmin/>: "" }
     {nivelUsuario ==='n1' ?<SideBarN1/>: "" }
+    {nivelUsuario ==='n2' ?<SideBarN2/>: "" }
+    {nivelUsuario ==='n3' ?<SideBarN3/>: "" }
 
     <Dashboard />
 

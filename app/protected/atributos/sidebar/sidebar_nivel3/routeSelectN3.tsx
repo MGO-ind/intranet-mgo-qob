@@ -5,7 +5,7 @@ import Link from "next/link";
 
 
 
-export const RouteSelectGral = () => {
+export const RouteSelectN3 = () => {
   return (
     <div className="space-y-1">
       <TransitionLink Icon={FiHome} title="Inicio" href="/"/>
