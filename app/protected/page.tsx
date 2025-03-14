@@ -12,6 +12,7 @@ export default async function ProtectedPage() {
     <main className="grid bg-black text-white gap-4 p-4 grid-cols-[220px,_1fr]">
     <SideBarAdmin/>
     <Dashboard />
+    {correo}
 
   </main> 
   );
