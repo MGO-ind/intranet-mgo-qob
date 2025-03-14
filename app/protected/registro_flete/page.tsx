@@ -30,7 +30,7 @@ export default async function ProtectedRegistroFlete() {
       
       <main className="grid bg-black text-white gap-4 p-4 grid-cols-[220px,_1fr]">
         {nivelUsuario ==='na1' ?<SideBarAdmin/>: "" }
-        {nivelUsuario ==='n1' ?<SideBarN1/>: <SideBarGral/> }
+        {nivelUsuario ==='n1' ?<SideBarN1/>: "" }
         <RegistroFletes/>
       </main>   
     );
