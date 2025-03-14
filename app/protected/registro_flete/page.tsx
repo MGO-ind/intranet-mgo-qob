@@ -6,7 +6,6 @@ import { SideBarN1 } from "../atributos/sidebar/sidebar_nivel1/sidebar_n1";
 import { SideBarGral } from "../atributos/sidebar/sidebar_general/sidebar_gral";
 
 
-
 export default async function ProtectedRegistroFlete() {
   let session = await auth();
     let correo = session?.user?.email;
@@ -30,7 +29,7 @@ export default async function ProtectedRegistroFlete() {
     return (
       
       <main className="grid bg-black text-white gap-4 p-4 grid-cols-[220px,_1fr]">
-        {nivelUsuario ==='na1' ?<SideBarAdmin/>: <SideBarGral/> }
+        {nivelUsuario ==='na1' ?<SideBarAdmin/>: "" }
         {nivelUsuario ==='n1' ?<SideBarN1/>: <SideBarGral/> }
         <RegistroFletes/>
       </main>   
