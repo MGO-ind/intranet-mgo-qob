@@ -23,7 +23,7 @@ export default function FormularioCostos() {
                 // TODO: Handle errors with useFormStatus - return 'Costo ya existe';
         } else {
             await createCosto(origen, destino, tallaenvio, costo, id_paqueteria);
-            redirect('/ProtectedPage');
+            redirect('/ProtectedConsultaFlete');
         }             
     }
 
