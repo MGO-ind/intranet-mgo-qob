@@ -17,7 +17,7 @@ export default async function SelectCorreos() {
         >
             <option value={""}>Seleccione una opción</option>
             {user.map((user: any) => (
-            <option key={user.correo} value={user.correo}>{user.correo}</option>
+            <option className="text=black" key={user.correo} value={user.correo}>{user.correo}</option>
         ))}
            
         </select>
