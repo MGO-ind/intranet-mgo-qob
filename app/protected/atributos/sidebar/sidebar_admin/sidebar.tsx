@@ -5,8 +5,8 @@ import { RouteSelectAdmin } from "./routeSelectAdmin";
 export function SideBarAdmin(){
 
   return (
-    <div className="font-[family-name:var(--font-geist-mono)]">
-      <div className="overflow-y bg-black text-white sticky top-4 h-[calc(100vh-32px-48px)] sm:w-[100px]" >
+    <div className="font-[family-name:var(--font-geist-mono)] sm:w-[100px]">
+      <div className="overflow-y bg-black text-white sticky top-4 h-[calc(100vh-32px-48px)]" >
         <AccountAdminToggle/>
         <RouteSelectAdmin/> 
       </div>
