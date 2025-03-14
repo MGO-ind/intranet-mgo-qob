@@ -8,12 +8,17 @@ export default async function ProtectedPage() {
   let session = await auth();
   let correo = session?.user?.email;
   let usuarios: any[] = [];
+  let nivelUsuario: string | undefined;
   
   try {
     correo?.toString();
     if (correo) {
       const usuarioResponse = await getUsuario(correo);
       usuarios = usuarioResponse;
+
+      if (usuarios.length > 0) {
+        nivelUsuario = usuarios[0].nivel; // Asignar el nivel del primer usuario a la variable
+      }
     }
 
   }
@@ -27,6 +32,9 @@ export default async function ProtectedPage() {
     <SideBarAdmin/>
 
     <Dashboard />
+    {nivelUsuario }
+    
+
     {usuarios.map((usuario) => (
           <div key={usuario.id}>
             <p>ID: {usuario.id}</p>
@@ -42,6 +50,11 @@ export default async function ProtectedPage() {
 }
 
 /*
+{usuarios.map((usuario) => (
+          <p key={usuario.id}>Nivel: {usuario.nivel}</p>
+        ))}
+
+
     <SignOut />
 function SignOut() {
   return (
