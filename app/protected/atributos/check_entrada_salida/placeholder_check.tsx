@@ -6,7 +6,7 @@ export const PlaceholderCheckHora = () => {
         <div className="lg:col-span-8 sm:col-span-12 overflow-hidden rounded-3xl bg-zinc-800 border border-stone-500 shadow-lg">
             <div className="p-4">
                 <h3 className="flex items-center gap-1.5 font-medium">
-                    Revisar el valor del dolar
+                    Hora
                 </h3>
             </div>
 
