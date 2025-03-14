@@ -27,7 +27,12 @@ export default async function TablaDatosUsuarios() {
                             <td className="p-4">{usuario.nombre}</td>
                             <td className="p-4">{usuario.apellido}</td>
                             <td className="p-4">{usuario.correo}</td>
-                            <td className="p-4">{usuario.nivel}</td>
+                            <td className="p-4">
+                                {usuario.nivel === "na1"?"Administrador":""}
+                                {usuario.nivel === "n1"?"Nivel 1":""}
+                                {usuario.nivel === "n2"?"Nivel 2":""}
+                                {usuario.nivel === "n3"?"Nivel 3":""}           
+                            </td>
                         </tr>
                     ))}
                 </tbody>
