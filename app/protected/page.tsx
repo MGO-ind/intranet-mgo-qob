@@ -1,7 +1,8 @@
 import { auth } from 'app/auth';
 import { Dashboard } from './atributos/dashboard/dashboard';
 import { SideBarAdmin } from './atributos/sidebar/sidebar_admin/sidebar';
-import { datosUsuario, dbTablas, getUsuario} from '../schema';
+import { getUsuario} from '../schema';
+import { SideBarN1 } from './atributos/sidebar/sidebar_nivel1/sidebar_n1';
 
 
 export default async function ProtectedPage() {
@@ -29,10 +30,11 @@ export default async function ProtectedPage() {
 
   return (
     <main className="grid bg-black text-white gap-4 p-4 grid-cols-[220px,_1fr]">
-    <SideBarAdmin/>
+     {nivelUsuario ==='na1' ?<SideBarAdmin/>:"" }
+     {nivelUsuario ==='n1' ?<SideBarN1/>:"" }
 
     <Dashboard />
-    {nivelUsuario }
+   
     
 
     {usuarios.map((usuario) => (
