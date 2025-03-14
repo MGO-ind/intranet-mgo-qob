@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 export const CheckHora = () => {
     const hora = new Date().getHours();
