@@ -27,7 +27,15 @@ export default async function ProtectedPage() {
     <SideBarAdmin/>
 
     <Dashboard />
-    {usuarios}
+    {usuarios.map((usuario) => (
+          <div key={usuario.id}>
+            <p>ID: {usuario.id}</p>
+            <p>Nombre: {usuario.nombre}</p>
+            <p>Apellido: {usuario.apellido}</p>
+            <p>Nivel: {usuario.nivel}</p>
+            <p>Correo: {usuario.correo}</p>
+          </div>
+        ))}
 
   </main> 
   );
