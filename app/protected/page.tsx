@@ -5,6 +5,7 @@ import { getUsuario} from '../schema';
 import { SideBarN1 } from './atributos/sidebar/sidebar_nivel1/sidebar_n1';
 import { SideBarN2 } from './atributos/sidebar/sidebar_nivel2/sidebar_n2';
 import { SideBarN3 } from './atributos/sidebar/sidebar_nivel3/sidebar_n3';
+import { CheckHora } from '../check_hora';
 
 export default async function ProtectedPage() {
   let session = await auth();
@@ -35,6 +36,7 @@ export default async function ProtectedPage() {
     {nivelUsuario ==='n3' ?<SideBarN3/>: "" }
 
     <Dashboard />
+    <CheckHora/>    
 
   </main> 
   );
