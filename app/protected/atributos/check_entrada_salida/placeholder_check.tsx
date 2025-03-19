@@ -11,7 +11,7 @@ export const PlaceholderCheckHora = () => {
             </div>
 
             <div className="h-64 px-4">
-                  
+            <CheckHora/>        
             </div>
         </div>
     );
