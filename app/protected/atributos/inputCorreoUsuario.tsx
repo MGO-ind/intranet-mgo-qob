@@ -4,8 +4,8 @@ import { getUsuario } from "@/app/schema";
 export const InputCorreoUsuario = async () => {
   let session = await auth();
 
-  /*let correo = session?.user?.email;
-  let usuarios: any[] = [];
+  let correo = session?.user?.email;
+  /*let usuarios: any[] = [];
   let nameUsuario: string | undefined;
     
   try {
@@ -28,7 +28,7 @@ export const InputCorreoUsuario = async () => {
     <input
     id="correo"
     name="correo"
-    value={session?.user?.id}
+    value={session?.user?.email ?? ''}
     required
     className="mt-1 block w-full text-black rounded-full border border-gray-700 px-3 py-2 placeholder-gray-400 shadow-sm focus:border-black focus:outline-none focus:ring-black sm:text-sm"
 />
