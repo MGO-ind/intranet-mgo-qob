@@ -17,6 +17,7 @@ export const RouteSelectAdmin = () => {
       <TransitionLink Icon={GrDeliver} title="Consultar Fletes" href="/protected/consultar_flete" />
       <TransitionLink Icon={MdOutlineInventory} title="Inventario" href="/protected/inventario" />
       <TransitionLink Icon={FaPen} title="Datos Usuario" href="/protected/registro_datos_usuario" />
+      <TransitionLink Icon={FaPen} title="Registro Producto" href="/protected/registro_productos" />
     </div>
   );
 };
