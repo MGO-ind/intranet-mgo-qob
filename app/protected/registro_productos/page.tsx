@@ -5,6 +5,7 @@ import { getUsuario } from "@/app/schema";
 import { SideBarN1 } from "../atributos/sidebar/sidebar_nivel1/sidebar_n1";
 import { SideBarN2 } from "../atributos/sidebar/sidebar_nivel2/sidebar_n2";
 import { SideBarN3 } from "../atributos/sidebar/sidebar_nivel3/sidebar_n3";
+import { RegistroProductos } from "../atributos/registro_productos/registro_productos";
 
 export default async function ProtectedRegistroProductos() {
   let session = await auth();
@@ -32,6 +33,8 @@ export default async function ProtectedRegistroProductos() {
       {nivelUsuario ==='n1' ?<SideBarN1/>: "" }
       {nivelUsuario ==='n2' ?<SideBarN2/>: "" }
       {nivelUsuario ==='n3' ?<SideBarN3/>: "" }
+
+      <RegistroProductos />
    
     </main>   
     );
