@@ -170,7 +170,6 @@ async function ensureTableCatalogoProductosExists() {
     categoria: text('categoria'),
     clave_sat: text('clave_sat'),
     correo_empleado: text('correo_empleado'),
-    comentarios: text('comentarios'),
     subcategoria: text('subcategoria'),
   });
 
@@ -186,7 +185,6 @@ export const catalogo_productos = pgTable('catalogo_productos', {
   categoria: text('categoria'),
   clave_sat: text('clave_sat'),
   correo_empleado: text('correo_empleado'),
-  comentarios: text('comentarios'),
   subcategoria: text('subcategoria'),
 });
 
