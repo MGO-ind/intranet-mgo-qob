@@ -6,6 +6,8 @@ import { MdOutlineInventory } from "react-icons/md";
 import Link from "next/link";
 import { FaPen } from "react-icons/fa";
 import { LuPackage } from "react-icons/lu";
+import { FaRegPenToSquare } from "react-icons/fa6";
+import { LuNotebookText } from "react-icons/lu";
 
 
 export const RouteSelectAdmin = () => {
@@ -17,7 +19,8 @@ export const RouteSelectAdmin = () => {
       <TransitionLink Icon={GrDeliver} title="Consultar Fletes" href="/protected/consultar_flete" />
       <TransitionLink Icon={MdOutlineInventory} title="Inventario" href="/protected/inventario" />
       <TransitionLink Icon={FaPen} title="Datos Usuario" href="/protected/registro_datos_usuario" />
-      <TransitionLink Icon={FaPen} title="Registro Producto" href="/protected/registro_productos" />
+      <TransitionLink Icon={FaRegPenToSquare} title="Registro Producto" href="/protected/registro_productos" />
+      <TransitionLink Icon={LuNotebookText } title="Catalogo de Productos" href="/protected/registro_productos" />
     </div>
   );
 };
