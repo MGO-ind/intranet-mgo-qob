@@ -1,6 +1,6 @@
 
 import { FormRegistroProductos } from "@/app/formProducto";
-import { createCosto, getCosto } from "@/app/schema";
+import { createNewProduct, getProducto } from "@/app/schema";
 import { SubmitButton } from "@/app/submit-button";
 import { redirect } from "next/navigation";
 import { FiFolder } from "react-icons/fi";
@@ -10,18 +10,23 @@ export default function FormularioProductos() {
   
     async function CatalogoProductos(formData: FormData) {
         'use server';
-        let origen = formData.get('origen') as string;
-        let destino = formData.get('destino') as string;
-        let tallaenvio = formData.get('tallaenvio') as string;
-        let costo = formData.get('costo') as unknown as number;
-        let id_paqueteria = formData.get('id_paqueteria') as unknown as number;
-        let flete = await getCosto(costo.toString());
+        
+        let marca_temporal = formData.get('marca_temporal') as string;
+        let codigo_producto = formData.get('codigo_producto') as string;
+        let nombre_producto = formData.get('nombre_producto') as string;
+        let empresa_producto = formData.get('empresa_producto') as string;
+        let categoria = formData.get('categoria') as string;
+        let clave_sat = formData.get('clave_sat') as string;
+        let correo_empleado = formData.get('correo_empleado') as string;
+        let subcategoria = formData.get('subcategoria') as string;
+
+        let producto = await getProducto(codigo_producto.toString());
     
-        if (flete.length > 0) {
-            return console.log('Costo ya existe');              
+        if (producto.length > 0) {
+            return console.log('El producto ya existe');              
                 // TODO: Handle errors with useFormStatus - return 'Costo ya existe';
         } else {
-            await createCosto(origen, destino, tallaenvio, costo, id_paqueteria);
+            await createNewProduct(marca_temporal, codigo_producto, nombre_producto, empresa_producto, categoria, clave_sat, correo_empleado, subcategoria);
             redirect('/ProtectedRegistroProductos');
         }             
     }
