@@ -115,7 +115,7 @@ export function FormRegistroProductos({
           <select
             id="categoria"
             name="categoria"
-            required
+
             className="mt-1 block w-full text-black rounded-full border border-gray-300 px-3 py-2 placeholder-gray-700 shadow-sm focus:border-black focus:outline-none focus:ring-black sm:text-sm"
             >
             <option value={""}>Seleccione una opción</option>
@@ -138,7 +138,7 @@ export function FormRegistroProductos({
             type="text"
             id="subcategoria"
             name="subcategoria"
-            required
+
             className="mt-1 block w-full text-black rounded-full border border-gray-300 px-3 py-2 placeholder-gray-700 shadow-sm focus:border-black focus:outline-none focus:ring-black sm:text-sm"
             />
             
