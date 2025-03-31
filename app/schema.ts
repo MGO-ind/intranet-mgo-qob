@@ -148,7 +148,7 @@ async function ensureTableCatalogoProductosExists() {
 
   if (!result[0].exists) {
     await client`
-      CREATE TABLE "datosUsuario" (
+      CREATE TABLE "catalogo_productos" (
         id_producto SERIAL PRIMARY KEY,
         marca_temporal TEXT,
         codigo_producto TEXT,
@@ -161,7 +161,7 @@ async function ensureTableCatalogoProductosExists() {
       );`;
   }
 
-  const tableCatalogoProducto = pgTable('catalogo_productos', {
+  const tableCatalogo_productos = pgTable('catalogo_productos', {
     id_producto: serial('id_producto').primaryKey(),
     marca_temporal: text('marca_temporal'),
     codigo_producto: text('codigo_producto'),
@@ -174,10 +174,10 @@ async function ensureTableCatalogoProductosExists() {
     subcategoria: text('subcategoria'),
   });
 
-  return tableCatalogoProducto;
+  return tableCatalogo_productos;
 }
 
-export const catalogoProdusctos = pgTable('catalogo_productos', {
+export const catalogo_productos = pgTable('catalogo_productos', {
   id_producto: serial('id_producto').primaryKey(),
   marca_temporal: text('marca_temporal'),
   codigo_producto: text('codigo_producto'),
