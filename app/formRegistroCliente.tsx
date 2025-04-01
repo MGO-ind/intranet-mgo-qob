@@ -57,7 +57,6 @@ export function FormRegistroCliente({
             name="rfc"
             className="mt-1 block uppercase w-full text-black rounded-full border border-gray-300 px-3 py-2 placeholder-gray-700 shadow-sm focus:border-black focus:outline-none focus:ring-black sm:text-sm"
             /> 
-        
         </div>
         <div>
           <label
@@ -70,10 +69,8 @@ export function FormRegistroCliente({
           type="number"
             id="telefono_cliente"
             name="telefono_cliente"
-            
             className="mt-1 uppercase block w-full text-black rounded-full border border-gray-300 px-3 py-2 placeholder-gray-700 shadow-sm focus:border-black focus:outline-none focus:ring-black sm:text-sm"
           />
-           
         </div>
         <div>
           <label
@@ -88,8 +85,6 @@ export function FormRegistroCliente({
             name="correo_cliente"
             className="mt-1 block w-full text-black rounded-full border border-gray-300 px-3 py-2 placeholder-gray-700 shadow-sm focus:border-black focus:outline-none focus:ring-black sm:text-sm"
             />
-            
-        
         </div>
         
         <div>
@@ -100,11 +95,7 @@ export function FormRegistroCliente({
             correo empleado 
           </label>
           <InputCorreoUsuario/>
-        
         </div>
-        
-        
-        
 
         {children}
       </form>

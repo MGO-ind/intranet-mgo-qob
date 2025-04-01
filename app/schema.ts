@@ -198,6 +198,15 @@ export async function getClientes(nombre_cliente: string) {
   return await db.select().from(catalogoClientes).where(eq(catalogoClientes.nombre_cliente, nombre_cliente));
 }
 
+export async function getProductosPaginados(limit: number, offset: number) {
+  return await dbTablas
+      .select()
+      .from(catalogo_productos)
+      .orderBy(catalogo_productos.codigo_producto)
+      .limit(limit)
+      .offset(offset);
+}
+
 export async function createNewClient(marca_temporal: string, nombre_cliente: string, telefono_cliente: string, correo_cliente: string, rfc: string, correo_empleado: string) {
   const catalogoClientes = await ensureTableCatalogoClientesExists();
   return await db.insert(catalogoClientes).values([{ marca_temporal, nombre_cliente, telefono_cliente, correo_cliente, rfc,  correo_empleado }]);
