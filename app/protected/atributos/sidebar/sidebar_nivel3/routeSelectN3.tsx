@@ -2,6 +2,7 @@
 import { IconType } from "react-icons";
 import { FiHome } from "react-icons/fi";
 import Link from "next/link";
+import { LuNotebookText } from "react-icons/lu";
 
 
 
@@ -9,6 +10,9 @@ export const RouteSelectN3 = () => {
   return (
     <div className="space-y-1">
       <TransitionLink Icon={FiHome} title="Inicio" href="/"/>
+      <TransitionLink Icon={LuNotebookText } title="Catalogo de Productos" href="/protected/catalogo_productos" />
+      
+      
     </div>
   );
 };
