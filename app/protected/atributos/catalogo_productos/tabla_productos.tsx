@@ -25,10 +25,10 @@ export default function TablaProductos() {
 
                 // Obtener el total de productos (para mostrar el número total de páginas)
                 const total = await dbTablas
-                    .raw<{ count: number }[]>(`SELECT COUNT(*) as count FROM ${catalogo_productos}`);
+                    //.raw<{ count: number }[]>(`SELECT COUNT(*) as count FROM ${catalogo_productos}`);
 
                 setProductos(productosPaginados);
-                setTotalProductos(total[0].count);
+                //setTotalProductos(total[0].count);
             } catch (e: any) {
                 console.error(e);
             }
