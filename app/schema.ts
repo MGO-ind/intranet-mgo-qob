@@ -9,6 +9,8 @@ let db = drizzle(client);
 
 export const dbTablas = drizzle(client)
 
+// Registro del costo de fletes
+
 export async function getCosto(costo: string) {
   const costofletes = await ensureTableFleteExists();
   return await db.select().from(costofletes).where(eq(costofletes.costo, costo));
@@ -74,7 +76,7 @@ export const costoflete = pgTable('costofletes', {
     paqueteria: numeric('paqueteria'),
   });
 */
-
+// Registro de usuarios
 export async function getDatosUsuario(correo: string) {
   const datosUsuario = await ensureTableDatosUsuarioExists();
   return await db.select().from(datosUsuario).where(eq(datosUsuario.correo, correo));
@@ -128,6 +130,7 @@ export const datosUsuario = pgTable('datosUsuario', {
   correo: text('correo'),
 });
 
+// Registro de productos
 export async function getProducto(codigo_producto: string) {
   const catalogoProductos = await ensureTableCatalogoProductosExists();
   return await db.select().from(catalogoProductos).where(eq(catalogoProductos.codigo_producto, codigo_producto));
@@ -187,6 +190,64 @@ export const catalogo_productos = pgTable('catalogo_productos', {
   correo_empleado: text('correo_empleado'),
   subcategoria: text('subcategoria'),
 });
+
+// REgistro de clientes 
+
+export async function getClientes(nombre_cliente: string) {
+  const catalogoClientes = await ensureTableCatalogoClientesExists();
+  return await db.select().from(catalogoClientes).where(eq(catalogoClientes.nombre_cliente, nombre_cliente));
+}
+
+export async function createNewClient(marca_temporal: string, nombre_cliente: string, telefono_cliente: string, correo_cliente: string, rfc: string, correo_empleado: string) {
+  const catalogoClientes = await ensureTableCatalogoClientesExists();
+  return await db.insert(catalogoClientes).values([{ marca_temporal, nombre_cliente, telefono_cliente, correo_cliente, rfc,  correo_empleado }]);
+}
+
+async function ensureTableCatalogoClientesExists() {
+  const result = await client`
+    SELECT EXISTS (
+      SELECT FROM information_schema.tables 
+      WHERE table_schema = 'public' 
+      AND table_name = 'catalogo_clientes'
+    );`;
+
+  if (!result[0].exists) {
+    await client`
+      CREATE TABLE "catalogo_clientes" (
+        id_producto SERIAL PRIMARY KEY,
+        marca_temporal TEXT,
+        nombre_cliente TEXT,
+        telefono_cliente TEXT,
+        correo_cliente TEXT,
+        rfc TEXT,
+        correo_empleado TEXT
+      );`;
+  }
+
+  const tableCatalogo_productos = pgTable('catalogo_clientes', {
+    id_producto: serial('id_producto').primaryKey(),
+    marca_temporal: text('marca_temporal'),
+    nombre_cliente: text('nombre_cliente'),
+    telefono_cliente: text('telefono_cliente'),
+    correo_cliente: text('correo_cliente'),
+    rfc: text('rfc'),
+    correo_empleado: text('correo_empleado')
+  });
+
+  return tableCatalogo_productos;
+}
+
+export const catalogo_clientes = pgTable('catalogo_clientes', {
+  id_producto: serial('id_producto').primaryKey(),
+    marca_temporal: text('marca_temporal'),
+    nombre_cliente: text('nombre_cliente'),
+    telefono_cliente: text('telefono_cliente'),
+    correo_cliente: text('correo_cliente'),
+    rfc: text('rfc'),
+    correo_empleado: text('correo_empleado')
+});
+
+// esto quedo aqui por si se ocupa para el registro de usuarios
 
 export const datosUsuario1 = pgTable('datosUsuario', {
   id: serial('id').primaryKey(),

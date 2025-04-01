@@ -6,7 +6,7 @@ import { SideBarN2 } from "../atributos/sidebar/sidebar_nivel2/sidebar_n2";
 import { SideBarN3 } from "../atributos/sidebar/sidebar_nivel3/sidebar_n3";
 import { Catalogo_Productos } from "../atributos/catalogo_productos/catalogo_productos";
 
-export default async function ProtectedRegistroFlete() {
+export default async function ProtectedCatalogoProductos() {
   let session = await auth();
   let correo = session?.user?.email;
   let usuarios: any[] = [];
