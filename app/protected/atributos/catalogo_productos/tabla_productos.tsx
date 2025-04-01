@@ -3,7 +3,7 @@ import { dbTablas, catalogo_productos } from "@/app/schema";
 export default async function TablaProductos() {
     let producto: any[] = [];
     try {
-        producto = await dbTablas.select().from(catalogo_productos).orderBy(catalogo_productos.nombre_producto);
+        producto = await dbTablas.select().from(catalogo_productos).orderBy(catalogo_productos.codigo_producto);
     }
     catch (e: any) {
         console.error(e);
@@ -15,11 +15,11 @@ export default async function TablaProductos() {
             <table className="w-full text-left table-auto min-w-max">   
                 <thead>
                     <tr>
-                        <th className='p-4 border-b border-neutral-500 text-slate-100 bg-zinc-900'>Codigo</th>
-                        <th className='p-4 border-b border-neutral-500 text-slate-100 bg-zinc-900'>Nombre</th>
-                        <th className='p-4 border-b border-neutral-500 text-slate-100 bg-zinc-900'>Clave SAT</th> 
-                        <th className='p-4 border-b border-neutral-500 text-slate-100 bg-zinc-900'>Empresa</th> 
-                        <th className='p-4 border-b border-neutral-500 text-slate-100 bg-zinc-900'>Registrado por:</th>
+                        <th className='p-4 border-b uppercase border-neutral-500 text-slate-100 bg-zinc-900'>Codigo</th>
+                        <th className='p-4 border-b uppercase border-neutral-500 text-slate-100 bg-zinc-900'>Nombre</th>
+                        <th className='p-4 border-b uppercase border-neutral-500 text-slate-100 bg-zinc-900'>Clave SAT</th> 
+                        <th className='p-4 border-b uppercase border-neutral-500 text-slate-100 bg-zinc-900'>Empresa</th> 
+                        <th className='p-4 border-b uppercase border-neutral-500 text-slate-100 bg-zinc-900'>Registrado por:</th>
                     </tr>
                 </thead>
                 <tbody>

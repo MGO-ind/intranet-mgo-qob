@@ -3,6 +3,7 @@ import { IconType } from "react-icons";
 import { FiHome } from "react-icons/fi";
 import Link from "next/link";
 import { LuNotebookText } from "react-icons/lu";
+import { FaRegPenToSquare } from "react-icons/fa6";
 
 
 
@@ -10,6 +11,7 @@ export const RouteSelectN3 = () => {
   return (
     <div className="space-y-1">
       <TransitionLink Icon={FiHome} title="Inicio" href="/"/>
+      <TransitionLink Icon={FaRegPenToSquare} title="Registro Productos" href="/protected/registro_productos" />
       <TransitionLink Icon={LuNotebookText } title="Catalogo de Productos" href="/protected/catalogo_productos" />
       
       
