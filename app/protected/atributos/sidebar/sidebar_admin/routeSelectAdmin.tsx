@@ -4,10 +4,10 @@ import { FiDollarSign, FiHome } from "react-icons/fi";
 import { GrDeliver } from "react-icons/gr";
 import { MdOutlineInventory } from "react-icons/md";
 import Link from "next/link";
-import { FaPen } from "react-icons/fa";
-import { LuPackage } from "react-icons/lu";
+import { FaPen, FaUserEdit } from "react-icons/fa";
+import { LuPackage, LuNotebookText } from "react-icons/lu";
 import { FaRegPenToSquare } from "react-icons/fa6";
-import { LuNotebookText } from "react-icons/lu";
+import { RiContactsBook3Line } from "react-icons/ri";
 
 
 export const RouteSelectAdmin = () => {
@@ -21,8 +21,8 @@ export const RouteSelectAdmin = () => {
       <TransitionLink Icon={FaPen} title="Datos Usuario" href="/protected/registro_datos_usuario" />
       <TransitionLink Icon={FaRegPenToSquare} title="Registro Productos" href="/protected/registro_productos" />
       <TransitionLink Icon={LuNotebookText } title="Catalogo de Productos" href="/protected/catalogo_productos" />
-      <TransitionLink Icon={FaRegPenToSquare} title="Registro Clientes" href="/protected/registro_clientes" />
-      <TransitionLink Icon={LuNotebookText } title="Catalogo de Clientes" href="/protected/catalogo_clientes" />
+      <TransitionLink Icon={FaUserEdit } title="Registro Clientes" href="/protected/registro_clientes" />
+      <TransitionLink Icon={RiContactsBook3Line  } title="Catalogo de Clientes" href="/protected/catalogo_clientes" />
     </div>
   );
 };
