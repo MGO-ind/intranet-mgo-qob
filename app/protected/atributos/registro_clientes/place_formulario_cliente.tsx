@@ -22,7 +22,7 @@ export default function FormularioClientes() {
             return console.log('El cliente ya existe');              
         } else {
             await createNewClient(marca_temporal, nombre_cliente, telefono_cliente, correo_cliente, rfc, correo_empleado);
-            redirect('/protected/registro_productos'); // Redirigir a la página de registro de productos
+            redirect('/protected/catalogo_clientes'); // Redirigir a la página de registro de productos
         }             
     }
 

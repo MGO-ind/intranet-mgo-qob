@@ -27,7 +27,7 @@ export default function FormularioProductos() {
                 // TODO: Handle errors with useFormStatus - return 'Costo ya existe';
         } else {
             await createNewProduct(marca_temporal, codigo_producto, nombre_producto, empresa_producto, categoria, clave_sat, correo_empleado, subcategoria);
-            redirect('/protected/registro_productos'); // Redirigir a la página de registro de productos
+            redirect('/protected/catalogo_productos'); // Redirigir a la página de registro de productos
         }             
     }
 
