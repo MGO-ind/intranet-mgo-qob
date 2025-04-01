@@ -1,13 +1,63 @@
+'use client';
+
+import { useState, useEffect } from 'react';
 import { dbTablas, catalogo_productos } from "@/app/schema";
 
-export default async function TablaProductos() {
-    let producto: any[] = [];
+export default function TablaProductos() {
+    const [productos, setProductos] = useState<any[]>([]);
+    const [paginaActual, setPaginaActual] = useState(1);
+    const [productosPorPagina] = useState(5); // Número de productos por página
+    const [totalProductos, setTotalProductos] = useState(0);
+
+    useEffect(() => {
+        async function fetchProductos() {
+            try {
+                // Calcular el offset
+                const offset = (paginaActual - 1) * productosPorPagina;
+
+                // Obtener productos paginados
+                const productosPaginados = await dbTablas
+                    .select()
+                    .from(catalogo_productos)
+                    .orderBy(catalogo_productos.codigo_producto)
+                    .limit(productosPorPagina)
+                    .offset(offset);
+
+                // Obtener el total de productos (para mostrar el número total de páginas)
+                const total = await dbTablas
+                    .raw<{ count: number }[]>(`SELECT COUNT(*) as count FROM ${catalogo_productos}`);
+
+                setProductos(productosPaginados);
+                setTotalProductos(total[0].count);
+            } catch (e: any) {
+                console.error(e);
+            }
+        }
+
+        fetchProductos();
+    }, [paginaActual, productosPorPagina]);
+
+    const totalPaginas = Math.ceil(totalProductos / productosPorPagina);
+
+    const handlePaginaAnterior = () => {
+        if (paginaActual > 1) {
+            setPaginaActual(paginaActual - 1);
+        }
+    };
+
+    const handlePaginaSiguiente = () => {
+        if (paginaActual < totalPaginas) {
+            setPaginaActual(paginaActual + 1);
+        }
+    };
+
+    /*let producto: any[] = [];
     try {
         producto = await dbTablas.select().from(catalogo_productos).orderBy(catalogo_productos.codigo_producto);
     }
     catch (e: any) {
         console.error(e);
-    }
+    }*/
 
     return (
         <>
@@ -23,7 +73,7 @@ export default async function TablaProductos() {
                     </tr>
                 </thead>
                 <tbody>
-                    {producto && producto.map((producto: any, index: number) => (
+                    {productos && productos.map((producto: any, index: number) => (
                         <tr className={index % 2 ? "bg-stone-700 text-sm hover:bg-black hover:text-white border-b border-neutral-500" : "text-sm hover:bg-black hover:text-white border-b border-neutral-500"} key={producto.id}>
                             <td className="p-4">{producto.codigo_producto}</td>
                             <td className="p-4">{producto.nombre_producto}</td>
@@ -36,16 +86,22 @@ export default async function TablaProductos() {
             </table>
             <div className="flex justify-between items-center px-4 py-3">
                 <div className="text-sm text-slate-200">
-                    Mostrando <b>1-5</b> de 45
+                    Mostrando <b>{(paginaActual - 1) * productosPorPagina + 1}</b>-
+                    <b>{Math.min(paginaActual * productosPorPagina, totalProductos)}</b> de <b>{totalProductos}</b>
                 </div>
                 <div className="flex space-x-1">
-                    <button className="px-3 py-1 min-w-9 min-h-9 text-sm font-normal text-slate-500 bg-white border border-slate-200 rounded hover:bg-slate-50 hover:border-slate-400 transition duration-200 ease">
+                    <button
+                        onClick={handlePaginaAnterior}
+                        disabled={paginaActual === 1}
+                        className="px-3 py-1 min-w-9 min-h-9 text-sm font-normal text-slate-500 bg-white border border-slate-200 rounded hover:bg-slate-50 hover:border-slate-400 transition duration-200 ease"
+                    >
                         Prev
                     </button>
-                    <button className="px-3 py-1 min-w-9 min-h-9 text-sm font-normal text-white bg-slate-800 border border-slate-800 rounded hover:bg-slate-600 hover:border-slate-600 transition duration-200 ease">
-                        1
-                    </button>                   
-                    <button className="px-3 py-1 min-w-9 min-h-9 text-sm font-normal text-slate-500 bg-white border border-slate-200 rounded hover:bg-slate-50 hover:border-slate-400 transition duration-200 ease">
+                    <button
+                        onClick={handlePaginaSiguiente}
+                        disabled={paginaActual === totalPaginas}
+                        className="px-3 py-1 min-w-9 min-h-9 text-sm font-normal text-slate-500 bg-white border border-slate-200 rounded hover:bg-slate-50 hover:border-slate-400 transition duration-200 ease"
+                    >
                         Sig
                     </button>
                 </div>
