@@ -17,7 +17,7 @@ export function FormRegistroProductos({
             htmlFor="marca_temporal"
             className="block text-xs text-white uppercase"
           >
-            marca_temporal
+            marca temporal
           </label>
           <input
             type="text"
@@ -33,7 +33,7 @@ export function FormRegistroProductos({
             htmlFor="codigo_producto"
             className="block text-xs uppercase"
           >
-            codigo_producto
+            codigo producto
           </label>
           <input
             type="text"
@@ -48,7 +48,7 @@ export function FormRegistroProductos({
             htmlFor="nombre_producto"
             className="block text-xs uppercase"
           >
-            nombre_producto
+            nombre producto
           </label>
           <input
             id="nombre_producto"
@@ -63,7 +63,7 @@ export function FormRegistroProductos({
             htmlFor="empresa_producto"
             className="block text-xs uppercase"
           >
-            empresa_producto
+            empresa producto
           </label>
           <select
             
@@ -94,7 +94,7 @@ export function FormRegistroProductos({
             htmlFor="clave_sat"
             className="block text-xs uppercase"
           >
-            clave_sat 
+            clave sat 
           </label>
           <input
           type="text"
