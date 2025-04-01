@@ -18,7 +18,7 @@ export function FormRegistroCliente({
             htmlFor="marca_temporal"
             className="block text-xs text-white uppercase"
           >
-            marca_temporal
+            marca temporal
           </label>
           <input
             type="text"
@@ -34,7 +34,7 @@ export function FormRegistroCliente({
             htmlFor="nombre_cliente"
             className="block text-xs uppercase"
           >
-            nombre_cliente
+            nombre cliente
           </label>
           <input
             type="text"
@@ -46,10 +46,25 @@ export function FormRegistroCliente({
         </div>
         <div>
           <label
+            htmlFor="rfc"
+            className="block text-xs uppercase"
+          >
+            rfc 
+          </label>
+          <input
+          type="text"
+            id="rfc"
+            name="rfc"
+            className="mt-1 block uppercase w-full text-black rounded-full border border-gray-300 px-3 py-2 placeholder-gray-700 shadow-sm focus:border-black focus:outline-none focus:ring-black sm:text-sm"
+            /> 
+        
+        </div>
+        <div>
+          <label
             htmlFor="telefono_cliente"
             className="block text-xs uppercase"
           >
-            telefono_cliente
+            telefono cliente
           </label>
           <input
           type="number"
@@ -65,7 +80,7 @@ export function FormRegistroCliente({
             htmlFor="correo_cliente"
             className="block text-xs uppercase"
           >
-            correo_cliente 
+            correo cliente 
           </label>
           <input
             type="text"
@@ -87,21 +102,7 @@ export function FormRegistroCliente({
           <InputCorreoUsuario/>
         
         </div>
-        <div>
-          <label
-            htmlFor="rfc"
-            className="block text-xs uppercase"
-          >
-            rfc 
-          </label>
-          <input
-          type="text"
-            id="rfc"
-            name="rfc"
-            className="mt-1 block uppercase w-full text-black rounded-full border border-gray-300 px-3 py-2 placeholder-gray-700 shadow-sm focus:border-black focus:outline-none focus:ring-black sm:text-sm"
-            /> 
         
-        </div>
         
         
 
