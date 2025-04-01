@@ -22,7 +22,7 @@ export const RouteSelectAdmin = () => {
       <TransitionLink Icon={FaRegPenToSquare} title="Registro Productos" href="/protected/registro_productos" />
       <TransitionLink Icon={LuNotebookText } title="Catalogo de Productos" href="/protected/catalogo_productos" />
       <TransitionLink Icon={FaRegPenToSquare} title="Registro Clientes" href="/protected/registro_clientes" />
-      <TransitionLink Icon={LuNotebookText } title="Catalogo de Clientes" href="/protected/catalogo_productos" />
+      <TransitionLink Icon={LuNotebookText } title="Catalogo de Clientes" href="/protected/catalogo_clientes" />
     </div>
   );
 };

@@ -4,6 +4,7 @@ import { getUsuario } from "@/app/schema";
 import { SideBarN1 } from "../atributos/sidebar/sidebar_nivel1/sidebar_n1";
 import { SideBarN2 } from "../atributos/sidebar/sidebar_nivel2/sidebar_n2";
 import { SideBarN3 } from "../atributos/sidebar/sidebar_nivel3/sidebar_n3";
+import { Catalogo_Clientes } from "../atributos/catalogo_clientes/catalogo_clientes";
 
 export default async function ProtectedCatalogoCliente() {
   let session = await auth();
@@ -31,7 +32,7 @@ export default async function ProtectedCatalogoCliente() {
       {nivelUsuario ==='n1' ?<SideBarN1/>: "" }
       {nivelUsuario ==='n2' ?<SideBarN2/>: "" }
       {nivelUsuario ==='n3' ?<SideBarN3/>: "" }
-  
+        <Catalogo_Clientes/>
     </main>   
     );
   }
