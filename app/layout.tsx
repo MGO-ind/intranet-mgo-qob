@@ -14,7 +14,7 @@ export const metadata = {
     title,
     description,
   },
-  metadataBase: new URL('https://nextjs-postgres-auth.vercel.app'),
+  metadataBase: new URL('https://intranet-mgo-qob.vercel.app/'),
 };
 
 export default function RootLayout({
