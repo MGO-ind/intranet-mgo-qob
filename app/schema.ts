@@ -223,7 +223,7 @@ async function ensureTableCatalogoClientesExists() {
   if (!result[0].exists) {
     await client`
       CREATE TABLE "catalogo_clientes" (
-        id_producto SERIAL PRIMARY KEY,
+        id_cliente SERIAL PRIMARY KEY,
         marca_temporal TEXT,
         nombre_cliente TEXT,
         telefono_cliente TEXT,
@@ -234,7 +234,7 @@ async function ensureTableCatalogoClientesExists() {
   }
 
   const tableCatalogo_productos = pgTable('catalogo_clientes', {
-    id_producto: serial('id_producto').primaryKey(),
+    id_cliente: serial('id_cliente').primaryKey(),
     marca_temporal: text('marca_temporal'),
     nombre_cliente: text('nombre_cliente'),
     telefono_cliente: text('telefono_cliente'),
@@ -247,7 +247,7 @@ async function ensureTableCatalogoClientesExists() {
 }
 
 export const catalogo_clientes = pgTable('catalogo_clientes', {
-  id_producto: serial('id_producto').primaryKey(),
+  id_cliente: serial('id_cliente').primaryKey(),
     marca_temporal: text('marca_temporal'),
     nombre_cliente: text('nombre_cliente'),
     telefono_cliente: text('telefono_cliente'),
