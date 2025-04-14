@@ -4,6 +4,8 @@ import { FiHome } from "react-icons/fi";
 import Link from "next/link";
 import { LuNotebookText } from "react-icons/lu";
 import { FaRegPenToSquare } from "react-icons/fa6";
+import { FaUserEdit } from "react-icons/fa";
+import { RiContactsBook3Line } from "react-icons/ri";
 
 
 
@@ -13,7 +15,8 @@ export const RouteSelectN3 = () => {
       <TransitionLink Icon={FiHome} title="Inicio" href="/"/>
       <TransitionLink Icon={FaRegPenToSquare} title="Registro Productos" href="/protected/registro_productos" />
       <TransitionLink Icon={LuNotebookText } title="Catalogo de Productos" href="/protected/catalogo_productos" />
-      
+      <TransitionLink Icon={FaUserEdit} title="Registro Clientes" href="/protected/registro_clientes" />
+      <TransitionLink Icon={RiContactsBook3Line} title="Catalogo de Clientes" href="/protected/catalogo_clientes" />
       
     </div>
   );
