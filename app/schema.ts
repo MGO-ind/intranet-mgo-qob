@@ -78,21 +78,21 @@ export const costoflete = pgTable('costofletes', {
 */
 // Registro de usuarios
 export async function getDatosUsuario(correo: string) {
-  const datosUsuario = await ensureTableDatosUsuarioExists();
+  const datosUsuario = await ensureTebleDatosUsuarioExists();
   return await db.select().from(datosUsuario).where(eq(datosUsuario.correo, correo));
 }
 
 export async function getUsuario(correo: string) {
-  const datosUsuario = await ensureTableDatosUsuarioExists();
+  const datosUsuario = await ensureTebleDatosUsuarioExists();
   return await db.select().from(datosUsuario).where(eq(datosUsuario.correo, correo));
 }
 
 export async function createDatosUsuario(nombre: string, apellido: string, correo: string, nivel: string) {
-  const datosUsuario = await ensureTableDatosUsuarioExists();
+  const datosUsuario = await ensureTebleDatosUsuarioExists();
   return await db.insert(datosUsuario).values([{ nombre, apellido, nivel, correo }]);
 }
 
-async function ensureTableDatosUsuarioExists() {
+async function ensureTebleDatosUsuarioExists() {
   const result = await client`
     SELECT EXISTS (
       SELECT FROM information_schema.tables 
@@ -100,24 +100,24 @@ async function ensureTableDatosUsuarioExists() {
       AND table_name = 'datosUsuario'
     );`;
 
-  if (!result[0].exists) {
-    await client`
-      CREATE TABLE "datosUsuario" (
-        id SERIAL PRIMARY KEY,
-        nombre TEXT,
-        apellido TEXT,
-        nivel TEXT,
-        correo TEXT
-      );`;
-  }
+    if (!result[0].exists) {
+      await client`
+        CREATE TABLE "datosUsuario" (
+          id SERIAL PRIMARY KEY,
+          nombre TEXT,
+          apellido TEXT,
+          nivel TEXT,
+          correo TEXT
+        );`;
+    }
 
-  const tableDatosUsuario = pgTable('datosUsuario', {
-    id: serial('id').primaryKey(),
-    nombre: text('nombre'),
-    apellido: text('apellido'),
-    nivel: text('nivel'),
-    correo: text('correo'),
-  });
+    const tableDatosUsuario = pgTable('datosUsuario', {
+      id: serial('id').primaryKey(),
+      nombre: text('nombre'),
+      apellido: text('apellido'),
+      nivel: text('nivel'),
+      correo: text('correo'),
+    });
 
   return tableDatosUsuario;
 }
