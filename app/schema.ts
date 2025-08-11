@@ -256,6 +256,73 @@ export const catalogo_clientes = pgTable('catalogo_clientes', {
     correo_empleado: text('correo_empleado')
 });
 
+// REgistro de FICHAS TECNICAS 
+
+export async function getFichaAtributos(nombre_ficha: string) {
+  // Assuming you want to query from a table that has 'nombre_ficha', you need to define it.
+  // For example, if 'catalogo_productos' has 'nombre_producto', you can use that:
+  const catalogoProductos = await ensureTableCatalogoProductosExists();
+  return await db.select().from(catalogoProductos).where(eq(catalogoProductos.nombre_producto, nombre_ficha));
+}
+
+export async function getFichaTecnica(limit: number, offset: number) {
+  return await dbTablas
+      .select()
+      .from(catalogo_productos)
+      .orderBy(catalogo_productos.codigo_producto)
+      .limit(limit)
+      .offset(offset);
+}
+
+export async function createNewFichaTecnica(marca_temporal: string, nombre_cliente: string, telefono_cliente: string, correo_cliente: string, rfc: string, correo_empleado: string) {
+  const catalogoClientes = await ensureTableCatalogoClientesExists();
+  return await db.insert(catalogoClientes).values([{ marca_temporal, nombre_cliente, telefono_cliente, correo_cliente, rfc,  correo_empleado }]);
+}
+
+async function ensureTableFichaTecnicaExists() {
+  const result = await client`
+    SELECT EXISTS (
+      SELECT FROM information_schema.tables 
+      WHERE table_schema = 'public' 
+      AND table_name = 'catalogo_clientes'
+    );`;
+
+  if (!result[0].exists) {
+    await client`
+      CREATE TABLE "catalogo_clientes" (
+        id_cliente SERIAL PRIMARY KEY,
+        marca_temporal TEXT,
+        nombre_cliente TEXT,
+        telefono_cliente TEXT,
+        correo_cliente TEXT,
+        rfc TEXT,
+        correo_empleado TEXT
+      );`;
+  }
+
+  const tableFichaTecnica = pgTable('catalogo_clientes', {
+    id_cliente: serial('id_cliente').primaryKey(),
+    marca_temporal: text('marca_temporal'),
+    nombre_cliente: text('nombre_cliente'),
+    telefono_cliente: text('telefono_cliente'),
+    correo_cliente: text('correo_cliente'),
+    rfc: text('rfc'),
+    correo_empleado: text('correo_empleado')
+  });
+
+  return tableFichaTecnica;
+}
+
+export const FichaTecnica = pgTable('catalogo_clientes', {
+  id_cliente: serial('id_cliente').primaryKey(),
+    marca_temporal: text('marca_temporal'),
+    nombre_cliente: text('nombre_cliente'),
+    telefono_cliente: text('telefono_cliente'),
+    correo_cliente: text('correo_cliente'),
+    rfc: text('rfc'),
+    correo_empleado: text('correo_empleado')
+});
+
 // esto quedo aqui por si se ocupa para el registro de usuarios
 
 export const datosUsuario1 = pgTable('datosUsuario', {
